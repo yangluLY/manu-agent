@@ -12,7 +12,7 @@ class Machine(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     code: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
     name: Mapped[str] = mapped_column(String(100), nullable=False)
-    modal: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    model: Mapped[str | None] = mapped_column(String(100), nullable=True)
     line_code: Mapped[str | None] = mapped_column(String(50), nullable=True, index=True)
     status: Mapped[str] = mapped_column(String(30), nullable=False, default="offline", index=True)
     last_heartbeat_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
