@@ -1,12 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, Response, status
 from sqlalchemy.orm import Session
 
+from apps.api.app.schemas.alarm import AlarmResponse
 from apps.api.app.schemas.machine import (
     MachineCreate,
     MachineResponse,
     MachineUpdate,
 )
 from services.database.session import get_db
+from services.mes.alarm_service import AlarmService
 from services.mes.machine_service import (
     InvalidMachineStatusError,
     MachineAlreadyExistsError,
@@ -152,3 +154,30 @@ def delete_machine(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=str(exc),
         ) from exc
+
+@router.get(
+    "/machine/{machine_id}",
+    response_model=list[AlarmResponse],
+)
+def get_machine_alarms(
+    machine_id: int,
+    active_only: bool = False,
+    db: Session = Depends(get_db),
+):
+    """
+    查询指定设备的报警记录。
+    """
+
+    service = AlarmService(db)
+
+    try:
+        if active_only:
+            return service.get_active_machine_alarms(machine_id)
+
+        return service.get_machine_alarms(machine_id)
+
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(exc),
+        )

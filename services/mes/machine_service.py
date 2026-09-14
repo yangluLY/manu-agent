@@ -8,7 +8,7 @@ from services.database.repositories.machine_repository import MachineRepository
 
 class MachineNotFoundError(Exception):
     """设备不存在"""
-    pass
+    pass  # noqa: PIE790
 
 
 class MachineAlreadyExistsError(Exception):
