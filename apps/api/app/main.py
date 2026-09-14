@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 
-from apps.api.app.routers import alarms, work_orders
+from apps.api.app.routers import (
+    alarms,
+    materials,
+    production_records,
+    work_orders,
+)
 from apps.api.app.routers.health import router as health_router
-from apps.api.app.routers.machines import router as machines_router
 
 app = FastAPI(
     title="ManuAgent",
@@ -11,6 +15,7 @@ app = FastAPI(
 
 
 app.include_router(health_router)
-app.include_router(machines_router)
 app.include_router(alarms.router)
 app.include_router(work_orders.router)
+app.include_router(materials.router)
+app.include_router(production_records.router)
