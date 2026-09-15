@@ -1,0 +1,72 @@
+[
+  {
+    "code": "MAT-001",
+    "name": "铝合金板",
+    "unit": "kg",
+    "stock_qty": 850.0,
+    "safe_stock": 300.0
+  },
+  {
+    "code": "MAT-002",
+    "name": "304不锈钢板",
+    "unit": "kg",
+    "stock_qty": 620.0,
+    "safe_stock": 250.0
+  },
+  {
+    "code": "MAT-003",
+    "name": "45号钢棒",
+    "unit": "kg",
+    "stock_qty": 1200.0,
+    "safe_stock": 400.0
+  },
+  {
+    "code": "MAT-004",
+    "name": "ABS塑料颗粒",
+    "unit": "kg",
+    "stock_qty": 450.0,
+    "safe_stock": 200.0
+  },
+  {
+    "code": "MAT-005",
+    "name": "PP塑料颗粒",
+    "unit": "kg",
+    "stock_qty": 135.0,
+    "safe_stock": 200.0
+  },
+  {
+    "code": "MAT-006",
+    "name": "M6螺丝",
+    "unit": "pcs",
+    "stock_qty": 8500.0,
+    "safe_stock": 3000.0
+  },
+  {
+    "code": "MAT-007",
+    "name": "M8螺丝",
+    "unit": "pcs",
+    "stock_qty": 6200.0,
+    "safe_stock": 2500.0
+  },
+  {
+    "code": "MAT-008",
+    "name": "轴承6204",
+    "unit": "pcs",
+    "stock_qty": 420.0,
+    "safe_stock": 150.0
+  },
+  {
+    "code": "MAT-009",
+    "name": "包装纸箱",
+    "unit": "pcs",
+    "stock_qty": 780.0,
+    "safe_stock": 300.0
+  },
+  {
+    "code": "MAT-010",
+    "name": "工业润滑油",
+    "unit": "L",
+    "stock_qty": 95.0,
+    "safe_stock": 50.0
+  }
+]
