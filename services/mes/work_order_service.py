@@ -2,6 +2,12 @@ from datetime import datetime
 
 from sqlalchemy.orm import Session
 
+from apps.api.app.core.exceptions import (
+    CompletedWorkOrderCancellationException,
+    MachineNotFoundException,
+    WorkOrderAlreadyCompletedException,
+    WorkOrderNotFoundException,
+)
 from services.database.models.work_order import WorkOrder
 from services.database.repositories.machine_repository import MachineRepository
 from services.database.repositories.work_order_repository import (
@@ -33,7 +39,7 @@ class WorkOrderService:
         work_order = self.work_order_repo.find_by_id(work_order_id)
 
         if work_order is None:
-            raise ValueError("Work order not found")
+            raise WorkOrderNotFoundException()
 
         return work_order
 
@@ -48,7 +54,7 @@ class WorkOrderService:
         work_order = self.work_order_repo.find_by_order_no(order_no)
 
         if work_order is None:
-            raise ValueError("Work order not found")
+            raise WorkOrderNotFoundException()
 
         return work_order
 
@@ -63,7 +69,7 @@ class WorkOrderService:
         machine = self.machine_repo.find_by_id(machine_id)
 
         if machine is None:
-            raise ValueError("Machine not found")
+            raise MachineNotFoundException()
 
         return self.work_order_repo.find_by_machine_id(machine_id)
 
@@ -78,7 +84,7 @@ class WorkOrderService:
         machine = self.machine_repo.find_by_id(machine_id)
 
         if machine is None:
-            raise ValueError("Machine not found")
+            raise MachineNotFoundException()
 
         return self.work_order_repo.find_open_by_machine_id(machine_id)
 
@@ -98,7 +104,7 @@ class WorkOrderService:
         machine = self.machine_repo.find_by_id(machine_id)
 
         if machine is None:
-            raise ValueError("Machine not found")
+            raise MachineNotFoundException()
 
         order_no = self._generate_order_no()
 
@@ -134,7 +140,7 @@ class WorkOrderService:
         work_order = self.work_order_repo.find_by_id(work_order_id)
 
         if work_order is None:
-            raise ValueError("Work order not found")
+            raise WorkOrderNotFoundException()
 
         try:
             work_order = self.work_order_repo.update(
@@ -162,10 +168,10 @@ class WorkOrderService:
         work_order = self.work_order_repo.find_by_id(work_order_id)
 
         if work_order is None:
-            raise ValueError("Work order not found")
+            raise WorkOrderNotFoundException()
 
         if work_order.status == "completed":
-            raise ValueError("Work order already completed")
+            raise WorkOrderAlreadyCompletedException()
 
         try:
             work_order = self.work_order_repo.update(
@@ -193,10 +199,10 @@ class WorkOrderService:
         work_order = self.work_order_repo.find_by_id(work_order_id)
 
         if work_order is None:
-            raise ValueError("Work order not found")
+            raise WorkOrderNotFoundException()
 
         if work_order.status == "completed":
-            raise ValueError("Completed work order cannot be cancelled")
+            raise CompletedWorkOrderCancellationException()
 
         try:
             work_order = self.work_order_repo.update(

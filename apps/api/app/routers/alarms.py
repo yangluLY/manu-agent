@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
 from apps.api.app.schemas.alarm import (
@@ -51,14 +51,7 @@ def get_alarm(
 
     service = AlarmService(db)
 
-    try:
-        return service.get_alarm(alarm_id)
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.get_alarm(alarm_id)
 
 
 @router.post(
@@ -76,20 +69,13 @@ def create_alarm(
 
     service = AlarmService(db)
 
-    try:
-        return service.create_alarm(
-            machine_id=data.machine_id,
-            alarm_code=data.alarm_code,
-            alarm_message=data.alarm_message,
-            level=data.level,
-            started_at=data.started_at,
-        )
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.create_alarm(
+        machine_id=data.machine_id,
+        alarm_code=data.alarm_code,
+        alarm_message=data.alarm_message,
+        level=data.level,
+        started_at=data.started_at,
+    )
 
 
 @router.patch(
@@ -107,22 +93,7 @@ def resolve_alarm(
 
     service = AlarmService(db)
 
-    try:
-        return service.resolve_alarm(
-            alarm_id=alarm_id,
-            ended_at=data.ended_at,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Alarm not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail=message,
-        )
+    return service.resolve_alarm(
+        alarm_id=alarm_id,
+        ended_at=data.ended_at,
+    )

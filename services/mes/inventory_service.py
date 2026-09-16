@@ -2,6 +2,12 @@ from decimal import Decimal
 
 from sqlalchemy.orm import Session
 
+from apps.api.app.core.exceptions import (
+    InsufficientInventoryException,
+    InvalidInventoryQuantityException,
+    MaterialCodeExistsException,
+    MaterialNotFoundException,
+)
 from services.database.models.material import Material
 from services.database.repositories.material_repository import MaterialRepository
 
@@ -29,7 +35,7 @@ class InventoryService:
         material = self.material_repo.find_by_id(material_id)
 
         if material is None:
-            raise ValueError("Material not found")
+            raise MaterialNotFoundException()
 
         return material
 
@@ -47,7 +53,7 @@ class InventoryService:
         material = self.material_repo.find_by_code(code)
 
         if material is None:
-            raise ValueError("Material not found")
+            raise MaterialNotFoundException()
 
         return material
 
@@ -76,14 +82,18 @@ class InventoryService:
         existing_material = self.material_repo.find_by_code(code)
 
         if existing_material is not None:
-            raise ValueError("Material code already exists")
+            raise MaterialCodeExistsException()
 
         # 业务层先校验，避免等数据库约束报错
         if stock_qty < 0:
-            raise ValueError("Stock quantity cannot be negative")
+            raise InvalidInventoryQuantityException(
+                "Stock quantity cannot be negative"
+            )
 
         if safe_stock < 0:
-            raise ValueError("Safe stock cannot be negative")
+            raise InvalidInventoryQuantityException(
+                "Safe stock cannot be negative"
+            )
 
         try:
             material = self.material_repo.create(
@@ -115,13 +125,13 @@ class InventoryService:
         material = self.material_repo.find_by_id(material_id)
 
         if material is None:
-            raise ValueError("Material not found")
+            raise MaterialNotFoundException()
 
         if "stock_qty" in data:
             stock_qty = data["stock_qty"]
 
             if stock_qty is not None and stock_qty < 0:
-                raise ValueError(
+                raise InvalidInventoryQuantityException(
                     "Stock quantity cannot be negative"
                 )
 
@@ -129,7 +139,7 @@ class InventoryService:
             safe_stock = data["safe_stock"]
 
             if safe_stock is not None and safe_stock < 0:
-                raise ValueError(
+                raise InvalidInventoryQuantityException(
                     "Safe stock cannot be negative"
                 )
 
@@ -165,10 +175,10 @@ class InventoryService:
         material = self.material_repo.find_by_id(material_id)
 
         if material is None:
-            raise ValueError("Material not found")
+            raise MaterialNotFoundException()
 
         if stock_qty < 0:
-            raise ValueError(
+            raise InvalidInventoryQuantityException(
                 "Stock quantity cannot be negative"
             )
 
@@ -209,7 +219,7 @@ class InventoryService:
         material = self.material_repo.find_by_id(material_id)
 
         if material is None:
-            raise ValueError("Material not found")
+            raise MaterialNotFoundException()
 
         new_stock = (
             material.stock_qty
@@ -217,9 +227,7 @@ class InventoryService:
         )
 
         if new_stock < 0:
-            raise ValueError(
-                "Insufficient inventory"
-            )
+            raise InsufficientInventoryException()
 
         try:
             material = self.material_repo.update_stock(

@@ -2,6 +2,11 @@ from datetime import datetime
 
 from sqlalchemy.orm import Session
 
+from apps.api.app.core.exceptions import (
+    AlarmAlreadyResolvedException,
+    AlarmNotFoundException,
+    MachineNotFoundException,
+)
 from services.database.models.alarm import MachineAlarm
 from services.database.repositories.alarm_repository import AlarmRepository
 from services.database.repositories.machine_repository import MachineRepository
@@ -27,7 +32,7 @@ class AlarmService:
         alarm = self.alarm_repo.find_by_id(alarm_id)
 
         if alarm is None:
-            raise ValueError("Alarm not found")
+            raise AlarmNotFoundException()
 
         return alarm
 
@@ -42,7 +47,7 @@ class AlarmService:
         machine = self.machine_repo.find_by_id(machine_id)
 
         if machine is None:
-            raise ValueError("Machine not found")
+            raise MachineNotFoundException()
 
         return self.alarm_repo.find_by_machine_id(machine_id)
 
@@ -65,7 +70,7 @@ class AlarmService:
         machine = self.machine_repo.find_by_id(machine_id)
 
         if machine is None:
-            raise ValueError("Machine not found")
+            raise MachineNotFoundException()
 
         return self.alarm_repo.find_active_by_machine_id(machine_id)
 
@@ -85,7 +90,7 @@ class AlarmService:
         machine = self.machine_repo.find_by_id(machine_id)
 
         if machine is None:
-            raise ValueError("Machine not found")
+            raise MachineNotFoundException()
 
         try:
             alarm = self.alarm_repo.create(
@@ -117,10 +122,10 @@ class AlarmService:
         alarm = self.alarm_repo.find_by_id(alarm_id)
 
         if alarm is None:
-            raise ValueError("Alarm not found")
+            raise AlarmNotFoundException()
 
         if alarm.ended_at is not None:
-            raise ValueError("Alarm already resolved")
+            raise AlarmAlreadyResolvedException()
 
         try:
             alarm = self.alarm_repo.resolve(

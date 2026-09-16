@@ -1,8 +1,9 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
+from apps.api.app.core.exceptions import DatabaseUnavailableException
 from services.database.session import get_db
 
 router = APIRouter(
@@ -33,7 +34,4 @@ def database_health_check(
         }
 
     except SQLAlchemyError as exc:
-        raise HTTPException(
-            status_code=503,
-            detail="Database connection failed",
-        ) from exc
+        raise DatabaseUnavailableException() from exc

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, Response, status
+from fastapi import APIRouter, Depends, Response, status
 from sqlalchemy.orm import Session
 
 from apps.api.app.schemas.alarm import AlarmResponse
@@ -9,12 +9,7 @@ from apps.api.app.schemas.machine import (
 )
 from services.database.session import get_db
 from services.mes.alarm_service import AlarmService
-from services.mes.machine_service import (
-    InvalidMachineStatusError,
-    MachineAlreadyExistsError,
-    MachineNotFoundError,
-    MachineService,
-)
+from services.mes.machine_service import MachineService
 
 router = APIRouter(
     prefix="/api/v1/machines",
@@ -50,14 +45,7 @@ def get_machine(
     """
     service = MachineService(db)
 
-    try:
-        return service.get_machine(machine_id)
-
-    except MachineNotFoundError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        ) from exc
+    return service.get_machine(machine_id)
 
 
 @router.post(
@@ -74,22 +62,9 @@ def create_machine(
     """
     service = MachineService(db)
 
-    try:
-        return service.create_machine(
-            machine_data.model_dump()
-        )
-
-    except MachineAlreadyExistsError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail=str(exc),
-        ) from exc
-
-    except InvalidMachineStatusError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(exc),
-        ) from exc
+    return service.create_machine(
+        machine_data.model_dump()
+    )
 
 
 @router.put(
@@ -106,27 +81,14 @@ def update_machine(
     """
     service = MachineService(db)
 
-    try:
-        update_data = machine_data.model_dump(
-            exclude_unset=True,
-        )
+    update_data = machine_data.model_dump(
+        exclude_unset=True,
+    )
 
-        return service.update_machine(
-            machine_id,
-            update_data,
-        )
-
-    except MachineNotFoundError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        ) from exc
-
-    except InvalidMachineStatusError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(exc),
-        ) from exc
+    return service.update_machine(
+        machine_id,
+        update_data,
+    )
 
 
 @router.delete(
@@ -142,18 +104,12 @@ def delete_machine(
     """
     service = MachineService(db)
 
-    try:
-        service.delete_machine(machine_id)
+    service.delete_machine(machine_id)
 
-        return Response(
-            status_code=status.HTTP_204_NO_CONTENT,
-        )
+    return Response(
+        status_code=status.HTTP_204_NO_CONTENT,
+    )
 
-    except MachineNotFoundError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        ) from exc
 
 @router.get(
     "/machine/{machine_id}",
@@ -170,14 +126,7 @@ def get_machine_alarms(
 
     service = AlarmService(db)
 
-    try:
-        if active_only:
-            return service.get_active_machine_alarms(machine_id)
+    if active_only:
+        return service.get_active_machine_alarms(machine_id)
 
-        return service.get_machine_alarms(machine_id)
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.get_machine_alarms(machine_id)

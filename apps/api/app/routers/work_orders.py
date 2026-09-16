@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
 from apps.api.app.schemas.work_order import (
@@ -45,14 +45,7 @@ def get_work_order(
 
     service = WorkOrderService(db)
 
-    try:
-        return service.get_work_order(work_order_id)
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.get_work_order(work_order_id)
 
 
 @router.post(
@@ -70,20 +63,13 @@ def create_work_order(
 
     service = WorkOrderService(db)
 
-    try:
-        return service.create_work_order(
-            machine_id=data.machine_id,
-            type=data.type,
-            priority=data.priority,
-            description=data.description,
-            assigned_to=data.assigned_to,
-        )
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.create_work_order(
+        machine_id=data.machine_id,
+        type=data.type,
+        priority=data.priority,
+        description=data.description,
+        assigned_to=data.assigned_to,
+    )
 
 
 @router.patch(
@@ -107,17 +93,10 @@ def update_work_order(
         exclude_unset=True
     )
 
-    try:
-        return service.update_work_order(
-            work_order_id,
-            **update_data,
-        )
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.update_work_order(
+        work_order_id,
+        **update_data,
+    )
 
 
 @router.patch(
@@ -134,22 +113,7 @@ def complete_work_order(
 
     service = WorkOrderService(db)
 
-    try:
-        return service.complete_work_order(work_order_id)
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Work order not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail=message,
-        )
+    return service.complete_work_order(work_order_id)
 
 
 @router.patch(
@@ -166,19 +130,4 @@ def cancel_work_order(
 
     service = WorkOrderService(db)
 
-    try:
-        return service.cancel_work_order(work_order_id)
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Work order not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail=message,
-        )
+    return service.cancel_work_order(work_order_id)

@@ -2,6 +2,12 @@ from datetime import date
 
 from sqlalchemy.orm import Session
 
+from apps.api.app.core.exceptions import (
+    InvalidDateRangeException,
+    InvalidProductionQuantityException,
+    MachineNotFoundException,
+    ProductionRecordNotFoundException,
+)
 from services.database.models.production_record import ProductionRecord
 from services.database.repositories.machine_repository import MachineRepository
 from services.database.repositories.production_repository import (
@@ -36,9 +42,7 @@ class ProductionService:
         record = self.production_repo.find_by_id(record_id)
 
         if record is None:
-            raise ValueError(
-                "Production record not found"
-            )
+            raise ProductionRecordNotFoundException()
 
         return record
 
@@ -61,16 +65,14 @@ class ProductionService:
             )
 
             if machine is None:
-                raise ValueError("Machine not found")
+                raise MachineNotFoundException()
 
         if (
             start_date is not None
             and end_date is not None
             and start_date > end_date
         ):
-            raise ValueError(
-                "Start date cannot be later than end date"
-            )
+            raise InvalidDateRangeException()
 
         return self.production_repo.find_by_filters(
             machine_id=machine_id,
@@ -101,7 +103,7 @@ class ProductionService:
         )
 
         if machine is None:
-            raise ValueError("Machine not found")
+            raise MachineNotFoundException()
 
         self._validate_quantities(
             planned_qty=planned_qty,
@@ -143,9 +145,7 @@ class ProductionService:
         )
 
         if record is None:
-            raise ValueError(
-                "Production record not found"
-            )
+            raise ProductionRecordNotFoundException()
 
         # 如果修改 machine_id，需要确认设备存在
         if "machine_id" in data:
@@ -156,7 +156,7 @@ class ProductionService:
             )
 
             if machine is None:
-                raise ValueError("Machine not found")
+                raise MachineNotFoundException()
 
         # 使用修改后的值进行整体校验
         planned_qty = data.get(
@@ -297,22 +297,22 @@ class ProductionService:
         """
 
         if planned_qty < 0:
-            raise ValueError(
+            raise InvalidProductionQuantityException(
                 "Planned quantity cannot be negative"
             )
 
         if actual_qty < 0:
-            raise ValueError(
+            raise InvalidProductionQuantityException(
                 "Actual quantity cannot be negative"
             )
 
         if defect_qty < 0:
-            raise ValueError(
+            raise InvalidProductionQuantityException(
                 "Defect quantity cannot be negative"
             )
 
         if defect_qty > actual_qty:
-            raise ValueError(
+            raise InvalidProductionQuantityException(
                 "Defect quantity cannot exceed actual quantity"
             )
 

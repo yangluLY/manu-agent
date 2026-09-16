@@ -1,6 +1,6 @@
 from datetime import date
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.orm import Session
 
 from apps.api.app.schemas.production_record import (
@@ -61,28 +61,13 @@ def get_production_records(
 
     service = ProductionService(db)
 
-    try:
-        return service.get_records(
-            machine_id=machine_id,
-            line_code=line_code,
-            product_code=product_code,
-            start_date=start_date,
-            end_date=end_date,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Machine not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.get_records(
+        machine_id=machine_id,
+        line_code=line_code,
+        product_code=product_code,
+        start_date=start_date,
+        end_date=end_date,
+    )
 
 
 @router.get(
@@ -114,28 +99,13 @@ def get_production_summary(
 
     service = ProductionService(db)
 
-    try:
-        return service.get_summary(
-            machine_id=machine_id,
-            line_code=line_code,
-            product_code=product_code,
-            start_date=start_date,
-            end_date=end_date,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Machine not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.get_summary(
+        machine_id=machine_id,
+        line_code=line_code,
+        product_code=product_code,
+        start_date=start_date,
+        end_date=end_date,
+    )
 
 
 @router.get(
@@ -152,14 +122,7 @@ def get_production_metrics(
 
     service = ProductionService(db)
 
-    try:
-        return service.get_record_metrics(record_id)
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.get_record_metrics(record_id)
 
 
 @router.get(
@@ -176,14 +139,7 @@ def get_production_record(
 
     service = ProductionService(db)
 
-    try:
-        return service.get_record(record_id)
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.get_record(record_id)
 
 
 @router.post(
@@ -201,30 +157,15 @@ def create_production_record(
 
     service = ProductionService(db)
 
-    try:
-        return service.create_record(
-            machine_id=data.machine_id,
-            line_code=data.line_code,
-            product_code=data.product_code,
-            planned_qty=data.planned_qty,
-            actual_qty=data.actual_qty,
-            defect_qty=data.defect_qty,
-            production_date=data.production_date,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Machine not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.create_record(
+        machine_id=data.machine_id,
+        line_code=data.line_code,
+        product_code=data.product_code,
+        planned_qty=data.planned_qty,
+        actual_qty=data.actual_qty,
+        defect_qty=data.defect_qty,
+        production_date=data.production_date,
+    )
 
 
 @router.patch(
@@ -248,25 +189,7 @@ def update_production_record(
         exclude_unset=True,
     )
 
-    try:
-        return service.update_record(
-            record_id,
-            **update_data,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message in {
-            "Production record not found",
-            "Machine not found",
-        }:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.update_record(
+        record_id,
+        **update_data,
+    )

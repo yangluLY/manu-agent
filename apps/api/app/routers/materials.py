@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
 from apps.api.app.schemas.material import (
@@ -65,14 +65,7 @@ def get_material(
 
     service = InventoryService(db)
 
-    try:
-        return service.get_material(material_id)
-
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=str(exc),
-        )
+    return service.get_material(material_id)
 
 
 @router.post(
@@ -90,28 +83,13 @@ def create_material(
 
     service = InventoryService(db)
 
-    try:
-        return service.create_material(
-            code=data.code,
-            name=data.name,
-            unit=data.unit,
-            stock_qty=data.stock_qty,
-            safe_stock=data.safe_stock,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Material code already exists":
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.create_material(
+        code=data.code,
+        name=data.name,
+        unit=data.unit,
+        stock_qty=data.stock_qty,
+        safe_stock=data.safe_stock,
+    )
 
 
 @router.patch(
@@ -135,25 +113,10 @@ def update_material(
         exclude_unset=True,
     )
 
-    try:
-        return service.update_material(
-            material_id,
-            **update_data,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Material not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.update_material(
+        material_id,
+        **update_data,
+    )
 
 
 @router.patch(
@@ -173,25 +136,10 @@ def set_material_stock(
 
     service = InventoryService(db)
 
-    try:
-        return service.set_stock(
-            material_id=material_id,
-            stock_qty=data.stock_qty,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Material not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.set_stock(
+        material_id=material_id,
+        stock_qty=data.stock_qty,
+    )
 
 
 @router.patch(
@@ -212,28 +160,7 @@ def adjust_material_stock(
 
     service = InventoryService(db)
 
-    try:
-        return service.adjust_stock(
-            material_id=material_id,
-            quantity_change=data.quantity_change,
-        )
-
-    except ValueError as exc:
-        message = str(exc)
-
-        if message == "Material not found":
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=message,
-            )
-
-        if message == "Insufficient inventory":
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail=message,
-            )
-
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail=message,
-        )
+    return service.adjust_stock(
+        material_id=material_id,
+        quantity_change=data.quantity_change,
+    )
