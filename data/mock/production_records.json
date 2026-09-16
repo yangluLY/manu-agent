@@ -1,0 +1,2702 @@
+[
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 452,
+    "actual_qty": 443,
+    "defect_qty": 14,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 702,
+    "actual_qty": 667,
+    "defect_qty": 3,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 519,
+    "actual_qty": 389,
+    "defect_qty": 23,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 766,
+    "actual_qty": 749,
+    "defect_qty": 15,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 629,
+    "actual_qty": 610,
+    "defect_qty": 17,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 788,
+    "actual_qty": 785,
+    "defect_qty": 20,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 542,
+    "actual_qty": 423,
+    "defect_qty": 28,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 452,
+    "actual_qty": 411,
+    "defect_qty": 3,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 709,
+    "actual_qty": 660,
+    "defect_qty": 4,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 674,
+    "actual_qty": 616,
+    "defect_qty": 20,
+    "production_date": "2026-08-17"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 682,
+    "actual_qty": 637,
+    "defect_qty": 15,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 695,
+    "actual_qty": 641,
+    "defect_qty": 4,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 795,
+    "actual_qty": 572,
+    "defect_qty": 36,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 451,
+    "actual_qty": 426,
+    "defect_qty": 7,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 483,
+    "actual_qty": 456,
+    "defect_qty": 5,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 759,
+    "actual_qty": 768,
+    "defect_qty": 18,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 673,
+    "actual_qty": 580,
+    "defect_qty": 21,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 538,
+    "actual_qty": 548,
+    "defect_qty": 13,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 750,
+    "actual_qty": 704,
+    "defect_qty": 19,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 517,
+    "actual_qty": 516,
+    "defect_qty": 15,
+    "production_date": "2026-08-18"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 537,
+    "actual_qty": 487,
+    "defect_qty": 15,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 508,
+    "actual_qty": 497,
+    "defect_qty": 8,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 473,
+    "actual_qty": 339,
+    "defect_qty": 24,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 782,
+    "actual_qty": 758,
+    "defect_qty": 24,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 585,
+    "actual_qty": 541,
+    "defect_qty": 18,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 446,
+    "actual_qty": 441,
+    "defect_qty": 13,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 721,
+    "actual_qty": 564,
+    "defect_qty": 32,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 597,
+    "actual_qty": 564,
+    "defect_qty": 19,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 683,
+    "actual_qty": 685,
+    "defect_qty": 3,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 749,
+    "actual_qty": 753,
+    "defect_qty": 20,
+    "production_date": "2026-08-19"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 457,
+    "actual_qty": 427,
+    "defect_qty": 4,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 769,
+    "actual_qty": 772,
+    "defect_qty": 9,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 659,
+    "actual_qty": 532,
+    "defect_qty": 55,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 727,
+    "actual_qty": 698,
+    "defect_qty": 7,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 790,
+    "actual_qty": 726,
+    "defect_qty": 24,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 706,
+    "actual_qty": 662,
+    "defect_qty": 3,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 557,
+    "actual_qty": 441,
+    "defect_qty": 17,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 443,
+    "actual_qty": 437,
+    "defect_qty": 12,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 465,
+    "actual_qty": 455,
+    "defect_qty": 15,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 535,
+    "actual_qty": 515,
+    "defect_qty": 11,
+    "production_date": "2026-08-20"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 676,
+    "actual_qty": 669,
+    "defect_qty": 17,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 604,
+    "actual_qty": 615,
+    "defect_qty": 15,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 664,
+    "actual_qty": 493,
+    "defect_qty": 35,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 573,
+    "actual_qty": 517,
+    "defect_qty": 11,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 403,
+    "actual_qty": 366,
+    "defect_qty": 8,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 434,
+    "actual_qty": 437,
+    "defect_qty": 13,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 663,
+    "actual_qty": 525,
+    "defect_qty": 29,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 676,
+    "actual_qty": 619,
+    "defect_qty": 20,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 524,
+    "actual_qty": 520,
+    "defect_qty": 15,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 448,
+    "actual_qty": 408,
+    "defect_qty": 7,
+    "production_date": "2026-08-21"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 610,
+    "actual_qty": 583,
+    "defect_qty": 15,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 431,
+    "actual_qty": 408,
+    "defect_qty": 6,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 527,
+    "actual_qty": 372,
+    "defect_qty": 32,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 616,
+    "actual_qty": 567,
+    "defect_qty": 10,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 626,
+    "actual_qty": 624,
+    "defect_qty": 19,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 425,
+    "actual_qty": 415,
+    "defect_qty": 8,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 447,
+    "actual_qty": 397,
+    "defect_qty": 25,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 608,
+    "actual_qty": 582,
+    "defect_qty": 6,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 430,
+    "actual_qty": 395,
+    "defect_qty": 2,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 535,
+    "actual_qty": 540,
+    "defect_qty": 15,
+    "production_date": "2026-08-22"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 616,
+    "actual_qty": 605,
+    "defect_qty": 16,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 479,
+    "actual_qty": 442,
+    "defect_qty": 5,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 696,
+    "actual_qty": 544,
+    "defect_qty": 34,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 429,
+    "actual_qty": 388,
+    "defect_qty": 7,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 429,
+    "actual_qty": 435,
+    "defect_qty": 3,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 435,
+    "actual_qty": 422,
+    "defect_qty": 10,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 606,
+    "actual_qty": 470,
+    "defect_qty": 30,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 696,
+    "actual_qty": 676,
+    "defect_qty": 15,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 736,
+    "actual_qty": 713,
+    "defect_qty": 14,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 504,
+    "actual_qty": 494,
+    "defect_qty": 7,
+    "production_date": "2026-08-23"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 602,
+    "actual_qty": 551,
+    "defect_qty": 13,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 561,
+    "actual_qty": 567,
+    "defect_qty": 18,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 634,
+    "actual_qty": 486,
+    "defect_qty": 42,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 437,
+    "actual_qty": 421,
+    "defect_qty": 8,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 578,
+    "actual_qty": 581,
+    "defect_qty": 18,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 545,
+    "actual_qty": 500,
+    "defect_qty": 15,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 713,
+    "actual_qty": 640,
+    "defect_qty": 39,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 741,
+    "actual_qty": 739,
+    "defect_qty": 10,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 468,
+    "actual_qty": 436,
+    "defect_qty": 13,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 539,
+    "actual_qty": 503,
+    "defect_qty": 5,
+    "production_date": "2026-08-24"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 504,
+    "actual_qty": 495,
+    "defect_qty": 15,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 528,
+    "actual_qty": 532,
+    "defect_qty": 16,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 724,
+    "actual_qty": 535,
+    "defect_qty": 39,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 570,
+    "actual_qty": 565,
+    "defect_qty": 13,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 482,
+    "actual_qty": 476,
+    "defect_qty": 10,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 687,
+    "actual_qty": 619,
+    "defect_qty": 4,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 679,
+    "actual_qty": 519,
+    "defect_qty": 23,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 620,
+    "actual_qty": 567,
+    "defect_qty": 8,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 583,
+    "actual_qty": 539,
+    "defect_qty": 6,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 581,
+    "actual_qty": 577,
+    "defect_qty": 18,
+    "production_date": "2026-08-25"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 717,
+    "actual_qty": 709,
+    "defect_qty": 23,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 483,
+    "actual_qty": 491,
+    "defect_qty": 14,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 412,
+    "actual_qty": 290,
+    "defect_qty": 30,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 742,
+    "actual_qty": 744,
+    "defect_qty": 21,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 481,
+    "actual_qty": 478,
+    "defect_qty": 3,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 640,
+    "actual_qty": 593,
+    "defect_qty": 17,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 579,
+    "actual_qty": 464,
+    "defect_qty": 28,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 514,
+    "actual_qty": 464,
+    "defect_qty": 5,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 542,
+    "actual_qty": 544,
+    "defect_qty": 18,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 579,
+    "actual_qty": 565,
+    "defect_qty": 9,
+    "production_date": "2026-08-26"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 414,
+    "actual_qty": 378,
+    "defect_qty": 12,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 697,
+    "actual_qty": 707,
+    "defect_qty": 9,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 705,
+    "actual_qty": 522,
+    "defect_qty": 50,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 623,
+    "actual_qty": 606,
+    "defect_qty": 12,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 695,
+    "actual_qty": 641,
+    "defect_qty": 4,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 400,
+    "actual_qty": 384,
+    "defect_qty": 11,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 586,
+    "actual_qty": 480,
+    "defect_qty": 32,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 719,
+    "actual_qty": 674,
+    "defect_qty": 20,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 659,
+    "actual_qty": 617,
+    "defect_qty": 10,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 756,
+    "actual_qty": 707,
+    "defect_qty": 6,
+    "production_date": "2026-08-27"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 740,
+    "actual_qty": 749,
+    "defect_qty": 18,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 715,
+    "actual_qty": 692,
+    "defect_qty": 11,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 555,
+    "actual_qty": 399,
+    "defect_qty": 32,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 638,
+    "actual_qty": 608,
+    "defect_qty": 15,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 776,
+    "actual_qty": 714,
+    "defect_qty": 5,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 447,
+    "actual_qty": 446,
+    "defect_qty": 12,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 515,
+    "actual_qty": 449,
+    "defect_qty": 16,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 525,
+    "actual_qty": 534,
+    "defect_qty": 12,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 633,
+    "actual_qty": 601,
+    "defect_qty": 14,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 767,
+    "actual_qty": 754,
+    "defect_qty": 14,
+    "production_date": "2026-08-28"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 475,
+    "actual_qty": 464,
+    "defect_qty": 2,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 798,
+    "actual_qty": 758,
+    "defect_qty": 7,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 425,
+    "actual_qty": 322,
+    "defect_qty": 34,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 633,
+    "actual_qty": 579,
+    "defect_qty": 10,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 786,
+    "actual_qty": 791,
+    "defect_qty": 18,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 680,
+    "actual_qty": 648,
+    "defect_qty": 6,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 630,
+    "actual_qty": 501,
+    "defect_qty": 19,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 792,
+    "actual_qty": 786,
+    "defect_qty": 15,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 540,
+    "actual_qty": 514,
+    "defect_qty": 13,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 539,
+    "actual_qty": 506,
+    "defect_qty": 16,
+    "production_date": "2026-08-29"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 470,
+    "actual_qty": 431,
+    "defect_qty": 7,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 761,
+    "actual_qty": 704,
+    "defect_qty": 12,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 677,
+    "actual_qty": 504,
+    "defect_qty": 31,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 599,
+    "actual_qty": 604,
+    "defect_qty": 13,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 791,
+    "actual_qty": 766,
+    "defect_qty": 14,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 552,
+    "actual_qty": 546,
+    "defect_qty": 16,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 675,
+    "actual_qty": 583,
+    "defect_qty": 30,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 649,
+    "actual_qty": 601,
+    "defect_qty": 10,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 599,
+    "actual_qty": 563,
+    "defect_qty": 14,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 770,
+    "actual_qty": 708,
+    "defect_qty": 13,
+    "production_date": "2026-08-30"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 718,
+    "actual_qty": 692,
+    "defect_qty": 22,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 442,
+    "actual_qty": 431,
+    "defect_qty": 3,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 493,
+    "actual_qty": 338,
+    "defect_qty": 26,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 632,
+    "actual_qty": 593,
+    "defect_qty": 16,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 542,
+    "actual_qty": 536,
+    "defect_qty": 16,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 441,
+    "actual_qty": 421,
+    "defect_qty": 11,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 579,
+    "actual_qty": 458,
+    "defect_qty": 14,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 786,
+    "actual_qty": 710,
+    "defect_qty": 8,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 718,
+    "actual_qty": 659,
+    "defect_qty": 5,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 688,
+    "actual_qty": 697,
+    "defect_qty": 13,
+    "production_date": "2026-08-31"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 792,
+    "actual_qty": 747,
+    "defect_qty": 17,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 798,
+    "actual_qty": 796,
+    "defect_qty": 27,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 696,
+    "actual_qty": 475,
+    "defect_qty": 35,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 603,
+    "actual_qty": 610,
+    "defect_qty": 6,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 452,
+    "actual_qty": 444,
+    "defect_qty": 6,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 689,
+    "actual_qty": 684,
+    "defect_qty": 10,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 738,
+    "actual_qty": 599,
+    "defect_qty": 30,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 406,
+    "actual_qty": 406,
+    "defect_qty": 12,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 621,
+    "actual_qty": 630,
+    "defect_qty": 15,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 762,
+    "actual_qty": 699,
+    "defect_qty": 7,
+    "production_date": "2026-09-01"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 715,
+    "actual_qty": 712,
+    "defect_qty": 15,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 638,
+    "actual_qty": 607,
+    "defect_qty": 16,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 565,
+    "actual_qty": 451,
+    "defect_qty": 45,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 542,
+    "actual_qty": 545,
+    "defect_qty": 6,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 691,
+    "actual_qty": 672,
+    "defect_qty": 11,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 653,
+    "actual_qty": 654,
+    "defect_qty": 6,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 581,
+    "actual_qty": 506,
+    "defect_qty": 22,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 684,
+    "actual_qty": 616,
+    "defect_qty": 20,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 523,
+    "actual_qty": 515,
+    "defect_qty": 10,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 753,
+    "actual_qty": 720,
+    "defect_qty": 18,
+    "production_date": "2026-09-02"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 408,
+    "actual_qty": 371,
+    "defect_qty": 4,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 556,
+    "actual_qty": 544,
+    "defect_qty": 8,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 617,
+    "actual_qty": 505,
+    "defect_qty": 44,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 759,
+    "actual_qty": 724,
+    "defect_qty": 10,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 461,
+    "actual_qty": 454,
+    "defect_qty": 6,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 498,
+    "actual_qty": 461,
+    "defect_qty": 9,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 451,
+    "actual_qty": 395,
+    "defect_qty": 16,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 491,
+    "actual_qty": 459,
+    "defect_qty": 12,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 540,
+    "actual_qty": 488,
+    "defect_qty": 3,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 757,
+    "actual_qty": 767,
+    "defect_qty": 18,
+    "production_date": "2026-09-03"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 452,
+    "actual_qty": 454,
+    "defect_qty": 10,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 645,
+    "actual_qty": 614,
+    "defect_qty": 6,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 529,
+    "actual_qty": 429,
+    "defect_qty": 35,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 605,
+    "actual_qty": 580,
+    "defect_qty": 12,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 477,
+    "actual_qty": 437,
+    "defect_qty": 9,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 443,
+    "actual_qty": 451,
+    "defect_qty": 3,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 710,
+    "actual_qty": 598,
+    "defect_qty": 32,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 630,
+    "actual_qty": 635,
+    "defect_qty": 8,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 556,
+    "actual_qty": 538,
+    "defect_qty": 3,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 790,
+    "actual_qty": 730,
+    "defect_qty": 8,
+    "production_date": "2026-09-04"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 480,
+    "actual_qty": 445,
+    "defect_qty": 9,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 401,
+    "actual_qty": 380,
+    "defect_qty": 9,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 549,
+    "actual_qty": 375,
+    "defect_qty": 27,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 759,
+    "actual_qty": 761,
+    "defect_qty": 5,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 535,
+    "actual_qty": 532,
+    "defect_qty": 12,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 617,
+    "actual_qty": 563,
+    "defect_qty": 6,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 536,
+    "actual_qty": 469,
+    "defect_qty": 15,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 557,
+    "actual_qty": 541,
+    "defect_qty": 16,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 624,
+    "actual_qty": 570,
+    "defect_qty": 14,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 539,
+    "actual_qty": 517,
+    "defect_qty": 10,
+    "production_date": "2026-09-05"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 706,
+    "actual_qty": 638,
+    "defect_qty": 11,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 709,
+    "actual_qty": 659,
+    "defect_qty": 5,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 791,
+    "actual_qty": 612,
+    "defect_qty": 44,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 790,
+    "actual_qty": 782,
+    "defect_qty": 14,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 542,
+    "actual_qty": 499,
+    "defect_qty": 11,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 446,
+    "actual_qty": 426,
+    "defect_qty": 7,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 743,
+    "actual_qty": 575,
+    "defect_qty": 20,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 755,
+    "actual_qty": 724,
+    "defect_qty": 18,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 789,
+    "actual_qty": 762,
+    "defect_qty": 14,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 529,
+    "actual_qty": 496,
+    "defect_qty": 16,
+    "production_date": "2026-09-06"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 663,
+    "actual_qty": 662,
+    "defect_qty": 3,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 611,
+    "actual_qty": 553,
+    "defect_qty": 11,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 720,
+    "actual_qty": 534,
+    "defect_qty": 33,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 681,
+    "actual_qty": 623,
+    "defect_qty": 8,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 462,
+    "actual_qty": 417,
+    "defect_qty": 9,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 763,
+    "actual_qty": 701,
+    "defect_qty": 15,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 447,
+    "actual_qty": 353,
+    "defect_qty": 22,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 636,
+    "actual_qty": 644,
+    "defect_qty": 15,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 655,
+    "actual_qty": 662,
+    "defect_qty": 9,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 612,
+    "actual_qty": 612,
+    "defect_qty": 21,
+    "production_date": "2026-09-07"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 633,
+    "actual_qty": 611,
+    "defect_qty": 10,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 435,
+    "actual_qty": 405,
+    "defect_qty": 11,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 574,
+    "actual_qty": 465,
+    "defect_qty": 39,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 544,
+    "actual_qty": 536,
+    "defect_qty": 16,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 476,
+    "actual_qty": 453,
+    "defect_qty": 8,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 682,
+    "actual_qty": 676,
+    "defect_qty": 11,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 496,
+    "actual_qty": 445,
+    "defect_qty": 17,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 519,
+    "actual_qty": 520,
+    "defect_qty": 9,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 781,
+    "actual_qty": 747,
+    "defect_qty": 24,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 597,
+    "actual_qty": 608,
+    "defect_qty": 17,
+    "production_date": "2026-09-08"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 653,
+    "actual_qty": 663,
+    "defect_qty": 5,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 451,
+    "actual_qty": 453,
+    "defect_qty": 8,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 407,
+    "actual_qty": 277,
+    "defect_qty": 30,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 438,
+    "actual_qty": 418,
+    "defect_qty": 14,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 719,
+    "actual_qty": 706,
+    "defect_qty": 17,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 745,
+    "actual_qty": 747,
+    "defect_qty": 12,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 720,
+    "actual_qty": 619,
+    "defect_qty": 37,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 716,
+    "actual_qty": 650,
+    "defect_qty": 15,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 516,
+    "actual_qty": 510,
+    "defect_qty": 9,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 789,
+    "actual_qty": 770,
+    "defect_qty": 24,
+    "production_date": "2026-09-09"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 485,
+    "actual_qty": 476,
+    "defect_qty": 15,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 566,
+    "actual_qty": 563,
+    "defect_qty": 7,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 620,
+    "actual_qty": 372,
+    "defect_qty": 43,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 487,
+    "actual_qty": 448,
+    "defect_qty": 10,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 717,
+    "actual_qty": 704,
+    "defect_qty": 14,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 518,
+    "actual_qty": 494,
+    "defect_qty": 6,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 741,
+    "actual_qty": 564,
+    "defect_qty": 35,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 746,
+    "actual_qty": 720,
+    "defect_qty": 5,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 700,
+    "actual_qty": 655,
+    "defect_qty": 22,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 633,
+    "actual_qty": 633,
+    "defect_qty": 6,
+    "production_date": "2026-09-10"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 647,
+    "actual_qty": 590,
+    "defect_qty": 9,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 694,
+    "actual_qty": 649,
+    "defect_qty": 16,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 737,
+    "actual_qty": 468,
+    "defect_qty": 42,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 710,
+    "actual_qty": 702,
+    "defect_qty": 21,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 797,
+    "actual_qty": 793,
+    "defect_qty": 18,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 512,
+    "actual_qty": 499,
+    "defect_qty": 11,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 721,
+    "actual_qty": 557,
+    "defect_qty": 30,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 558,
+    "actual_qty": 555,
+    "defect_qty": 3,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 774,
+    "actual_qty": 708,
+    "defect_qty": 22,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 782,
+    "actual_qty": 742,
+    "defect_qty": 8,
+    "production_date": "2026-09-11"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 671,
+    "actual_qty": 644,
+    "defect_qty": 8,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 531,
+    "actual_qty": 536,
+    "defect_qty": 17,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 782,
+    "actual_qty": 548,
+    "defect_qty": 71,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 438,
+    "actual_qty": 401,
+    "defect_qty": 13,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 685,
+    "actual_qty": 646,
+    "defect_qty": 18,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 535,
+    "actual_qty": 515,
+    "defect_qty": 9,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 699,
+    "actual_qty": 568,
+    "defect_qty": 31,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 455,
+    "actual_qty": 446,
+    "defect_qty": 8,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-B",
+    "planned_qty": 712,
+    "actual_qty": 659,
+    "defect_qty": 4,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 758,
+    "actual_qty": 709,
+    "defect_qty": 12,
+    "production_date": "2026-09-12"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 423,
+    "actual_qty": 428,
+    "defect_qty": 6,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 459,
+    "actual_qty": 418,
+    "defect_qty": 13,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 598,
+    "actual_qty": 384,
+    "defect_qty": 47,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 700,
+    "actual_qty": 692,
+    "defect_qty": 6,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-BRACKET-A",
+    "planned_qty": 735,
+    "actual_qty": 670,
+    "defect_qty": 13,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 543,
+    "actual_qty": 490,
+    "defect_qty": 7,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 627,
+    "actual_qty": 559,
+    "defect_qty": 35,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-B",
+    "planned_qty": 751,
+    "actual_qty": 709,
+    "defect_qty": 22,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 431,
+    "actual_qty": 408,
+    "defect_qty": 4,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 632,
+    "actual_qty": 575,
+    "defect_qty": 6,
+    "production_date": "2026-09-13"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 425,
+    "actual_qty": 422,
+    "defect_qty": 5,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 689,
+    "actual_qty": 637,
+    "defect_qty": 19,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 700,
+    "actual_qty": 427,
+    "defect_qty": 56,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-A",
+    "planned_qty": 796,
+    "actual_qty": 730,
+    "defect_qty": 23,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 541,
+    "actual_qty": 542,
+    "defect_qty": 5,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-A",
+    "planned_qty": 676,
+    "actual_qty": 628,
+    "defect_qty": 6,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-A",
+    "planned_qty": 467,
+    "actual_qty": 355,
+    "defect_qty": 21,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 701,
+    "actual_qty": 658,
+    "defect_qty": 6,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 464,
+    "actual_qty": 458,
+    "defect_qty": 9,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-A",
+    "planned_qty": 643,
+    "actual_qty": 613,
+    "defect_qty": 9,
+    "production_date": "2026-09-14"
+  },
+  {
+    "machine_code": "MC-001",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-A",
+    "planned_qty": 631,
+    "actual_qty": 606,
+    "defect_qty": 20,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-002",
+    "line_code": "LINE-A",
+    "product_code": "P-GEAR-B",
+    "planned_qty": 772,
+    "actual_qty": 767,
+    "defect_qty": 23,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-003",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 634,
+    "actual_qty": 424,
+    "defect_qty": 38,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-004",
+    "line_code": "LINE-A",
+    "product_code": "P-SHAFT-B",
+    "planned_qty": 605,
+    "actual_qty": 575,
+    "defect_qty": 4,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-005",
+    "line_code": "LINE-B",
+    "product_code": "P-HOUSING-A",
+    "planned_qty": 437,
+    "actual_qty": 440,
+    "defect_qty": 6,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-006",
+    "line_code": "LINE-B",
+    "product_code": "P-STAMP-B",
+    "planned_qty": 433,
+    "actual_qty": 396,
+    "defect_qty": 9,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-007",
+    "line_code": "LINE-B",
+    "product_code": "P-PLASTIC-B",
+    "planned_qty": 595,
+    "actual_qty": 535,
+    "defect_qty": 27,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-008",
+    "line_code": "LINE-C",
+    "product_code": "P-ASSEMBLY-A",
+    "planned_qty": 658,
+    "actual_qty": 640,
+    "defect_qty": 5,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-009",
+    "line_code": "LINE-C",
+    "product_code": "P-PACK-A",
+    "planned_qty": 735,
+    "actual_qty": 718,
+    "defect_qty": 20,
+    "production_date": "2026-09-15"
+  },
+  {
+    "machine_code": "MC-010",
+    "line_code": "LINE-C",
+    "product_code": "P-INSPECT-B",
+    "planned_qty": 620,
+    "actual_qty": 591,
+    "defect_qty": 7,
+    "production_date": "2026-09-15"
+  }
+]

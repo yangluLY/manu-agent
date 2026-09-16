@@ -1,0 +1,222 @@
+[
+  {
+    "order_no": "WO-20260817-020",
+    "machine_code": "MC-003",
+    "type": "repair",
+    "priority": "high",
+    "description": "MC-003 主轴温度持续偏高，检查冷却系统、润滑状态及轴承温升。",
+    "status": "completed",
+    "assigned_to": "张工",
+    "created_at": "2026-08-17T04:54:38",
+    "updated_at": "2026-08-17T13:54:38"
+  },
+  {
+    "order_no": "WO-20260819-017",
+    "machine_code": "MC-007",
+    "type": "repair",
+    "priority": "low",
+    "description": "检查 PLC 及工业网络通信连接状态。",
+    "status": "completed",
+    "assigned_to": "张工",
+    "created_at": "2026-08-19T13:38:52",
+    "updated_at": "2026-08-19T20:38:52"
+  },
+  {
+    "order_no": "WO-20260824-007",
+    "machine_code": "MC-002",
+    "type": "inspection",
+    "priority": "medium",
+    "description": "检查液压压力、油路以及密封情况。",
+    "status": "in_progress",
+    "assigned_to": "张工",
+    "created_at": "2026-08-24T09:07:03",
+    "updated_at": "2026-08-24T16:07:03"
+  },
+  {
+    "order_no": "WO-20260824-009",
+    "machine_code": "MC-003",
+    "type": "repair",
+    "priority": "high",
+    "description": "MC-003 出现驱动电机过载，检查电机、负载参数以及加工工况。",
+    "status": "completed",
+    "assigned_to": "张工",
+    "created_at": "2026-08-24T18:26:11",
+    "updated_at": "2026-08-25T18:26:11"
+  },
+  {
+    "order_no": "WO-20260826-018",
+    "machine_code": "MC-003",
+    "type": "repair",
+    "priority": "high",
+    "description": "MC-003 出现驱动电机过载，检查电机、负载参数以及加工工况。",
+    "status": "in_progress",
+    "assigned_to": "赵工",
+    "created_at": "2026-08-26T14:38:45",
+    "updated_at": "2026-08-26T19:38:45"
+  },
+  {
+    "order_no": "WO-20260827-016",
+    "machine_code": "MC-009",
+    "type": "repair",
+    "priority": "medium",
+    "description": "检查 PLC 及工业网络通信连接状态。",
+    "status": "pending",
+    "assigned_to": "王工",
+    "created_at": "2026-08-27T05:31:44",
+    "updated_at": "2026-08-27T13:31:44"
+  },
+  {
+    "order_no": "WO-20260827-012",
+    "machine_code": "MC-001",
+    "type": "inspection",
+    "priority": "high",
+    "description": "检查驱动电机温度、电流和负载情况。",
+    "status": "completed",
+    "assigned_to": "李工",
+    "created_at": "2026-08-27T20:11:53",
+    "updated_at": "2026-08-29T03:11:53"
+  },
+  {
+    "order_no": "WO-20260828-011",
+    "machine_code": "MC-003",
+    "type": "repair",
+    "priority": "urgent",
+    "description": "MC-003 多次出现主轴振动报警，检查主轴轴承、刀具夹持及机械结构。",
+    "status": "in_progress",
+    "assigned_to": "李工",
+    "created_at": "2026-08-28T02:22:15",
+    "updated_at": "2026-08-28T07:22:15"
+  },
+  {
+    "order_no": "WO-20260829-014",
+    "machine_code": "MC-009",
+    "type": "inspection",
+    "priority": "low",
+    "description": "检查驱动电机温度、电流和负载情况。",
+    "status": "in_progress",
+    "assigned_to": "王工",
+    "created_at": "2026-08-29T17:30:16",
+    "updated_at": "2026-08-29T21:30:16"
+  },
+  {
+    "order_no": "WO-20260902-004",
+    "machine_code": "MC-003",
+    "type": "inspection",
+    "priority": "urgent",
+    "description": "MC-003 液压压力异常，检查液压站压力、油泵、阀组及管路。",
+    "status": "completed",
+    "assigned_to": "王工",
+    "created_at": "2026-09-02T11:15:24",
+    "updated_at": "2026-09-02T13:15:24"
+  },
+  {
+    "order_no": "WO-20260902-010",
+    "machine_code": "MC-010",
+    "type": "inspection",
+    "priority": "medium",
+    "description": "检查驱动电机温度、电流和负载情况。",
+    "status": "completed",
+    "assigned_to": "王工",
+    "created_at": "2026-09-02T16:35:01",
+    "updated_at": "2026-09-03T17:35:01"
+  },
+  {
+    "order_no": "WO-20260905-019",
+    "machine_code": "MC-001",
+    "type": "inspection",
+    "priority": "urgent",
+    "description": "检查液压压力、油路以及密封情况。",
+    "status": "pending",
+    "assigned_to": "赵工",
+    "created_at": "2026-09-05T13:17:40",
+    "updated_at": "2026-09-05T14:17:40"
+  },
+  {
+    "order_no": "WO-20260905-008",
+    "machine_code": "MC-002",
+    "type": "repair",
+    "priority": "medium",
+    "description": "检查 PLC 及工业网络通信连接状态。",
+    "status": "completed",
+    "assigned_to": "王工",
+    "created_at": "2026-09-05T17:01:40",
+    "updated_at": "2026-09-06T03:01:40"
+  },
+  {
+    "order_no": "WO-20260908-013",
+    "machine_code": "MC-007",
+    "type": "maintenance",
+    "priority": "medium",
+    "description": "按照设备保养计划执行检查、清洁和润滑。",
+    "status": "in_progress",
+    "assigned_to": "王工",
+    "created_at": "2026-09-08T14:02:18",
+    "updated_at": "2026-09-08T14:02:18"
+  },
+  {
+    "order_no": "WO-20260908-002",
+    "machine_code": "MC-005",
+    "type": "maintenance",
+    "priority": "medium",
+    "description": "按照设备保养计划执行检查、清洁和润滑。",
+    "status": "in_progress",
+    "assigned_to": "赵工",
+    "created_at": "2026-09-08T16:54:07",
+    "updated_at": "2026-09-08T20:54:07"
+  },
+  {
+    "order_no": "WO-20260911-005",
+    "machine_code": "MC-009",
+    "type": "inspection",
+    "priority": "medium",
+    "description": "检查液压压力、油路以及密封情况。",
+    "status": "pending",
+    "assigned_to": "赵工",
+    "created_at": "2026-09-11T04:08:02",
+    "updated_at": "2026-09-11T06:08:02"
+  },
+  {
+    "order_no": "WO-20260912-001",
+    "machine_code": "MC-004",
+    "type": "inspection",
+    "priority": "low",
+    "description": "检查传感器连接、信号和安装状态。",
+    "status": "completed",
+    "assigned_to": "王工",
+    "created_at": "2026-09-12T06:51:38",
+    "updated_at": "2026-09-13T13:51:38"
+  },
+  {
+    "order_no": "WO-20260912-003",
+    "machine_code": "MC-009",
+    "type": "inspection",
+    "priority": "medium",
+    "description": "检查传感器连接、信号和安装状态。",
+    "status": "completed",
+    "assigned_to": "张工",
+    "created_at": "2026-09-12T13:05:58",
+    "updated_at": "2026-09-13T12:05:58"
+  },
+  {
+    "order_no": "WO-20260913-015",
+    "machine_code": "MC-008",
+    "type": "maintenance",
+    "priority": "low",
+    "description": "按照设备保养计划执行检查、清洁和润滑。",
+    "status": "completed",
+    "assigned_to": "赵工",
+    "created_at": "2026-09-13T20:21:17",
+    "updated_at": "2026-09-14T22:21:17"
+  },
+  {
+    "order_no": "WO-20260914-006",
+    "machine_code": "MC-003",
+    "type": "repair",
+    "priority": "high",
+    "description": "MC-003 多次出现主轴振动报警，检查主轴轴承、刀具夹持及机械结构。",
+    "status": "completed",
+    "assigned_to": "赵工",
+    "created_at": "2026-09-14T02:01:16",
+    "updated_at": "2026-09-15T12:01:16"
+  }
+]

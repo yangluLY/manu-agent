@@ -2,23 +2,13 @@ from typing import Any, ClassVar
 
 from sqlalchemy.orm import Session
 
+from apps.api.app.core.exceptions import (
+    InvalidMachineStatusException,
+    MachineCodeExistsException,
+    MachineNotFoundException,
+)
 from services.database.models.machine import Machine
 from services.database.repositories.machine_repository import MachineRepository
-
-
-class MachineNotFoundError(Exception):
-    """设备不存在"""
-    pass
-
-
-class MachineAlreadyExistsError(Exception):
-    """设备编码已经存在"""
-    pass
-
-
-class InvalidMachineStatusError(Exception):
-    """设备状态不合法"""
-    pass
 
 
 class MachineService:
@@ -46,7 +36,7 @@ class MachineService:
         machine = self.repository.find_by_id(machine_id)
 
         if machine is None:
-            raise MachineNotFoundError(
+            raise MachineNotFoundException(
                 f"Machine with id={machine_id} not found"
             )
 
@@ -59,7 +49,7 @@ class MachineService:
         machine = self.repository.find_by_code(code)
 
         if machine is None:
-            raise MachineNotFoundError(
+            raise MachineNotFoundException(
                 f"Machine with code={code} not found"
             )
 
@@ -78,7 +68,7 @@ class MachineService:
         existing_machine = self.repository.find_by_code(code)
 
         if existing_machine is not None:
-            raise MachineAlreadyExistsError(
+            raise MachineCodeExistsException(
                 f"Machine with code={code} already exists"
             )
 
@@ -125,6 +115,6 @@ class MachineService:
         """
 
         if status not in self.ALLOWED_STATUSES:
-            raise InvalidMachineStatusError(
+            raise InvalidMachineStatusException(
                 f"Invalid machine status: {status}"
             )

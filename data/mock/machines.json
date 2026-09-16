@@ -1,0 +1,82 @@
+[
+  {
+    "code": "MC-001",
+    "name": "CNC加工中心-01",
+    "model": "VMC-850",
+    "line_code": "LINE-A",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:39:00"
+  },
+  {
+    "code": "MC-002",
+    "name": "CNC加工中心-02",
+    "model": "VMC-850",
+    "line_code": "LINE-A",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:56:00"
+  },
+  {
+    "code": "MC-003",
+    "name": "数控车床-03",
+    "model": "CK6150",
+    "line_code": "LINE-A",
+    "status": "maintenance",
+    "last_heartbeat_at": "2026-09-15T06:00:00"
+  },
+  {
+    "code": "MC-004",
+    "name": "数控车床-04",
+    "model": "CK6150",
+    "line_code": "LINE-A",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:59:00"
+  },
+  {
+    "code": "MC-005",
+    "name": "激光切割机-05",
+    "model": "LC-3015",
+    "line_code": "LINE-B",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:36:00"
+  },
+  {
+    "code": "MC-006",
+    "name": "冲压机-06",
+    "model": "JH21-160",
+    "line_code": "LINE-B",
+    "status": "idle",
+    "last_heartbeat_at": "2026-09-15T17:51:00"
+  },
+  {
+    "code": "MC-007",
+    "name": "注塑机-07",
+    "model": "MA1600",
+    "line_code": "LINE-B",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:52:00"
+  },
+  {
+    "code": "MC-008",
+    "name": "装配机器人-08",
+    "model": "IRB-6700",
+    "line_code": "LINE-C",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:52:00"
+  },
+  {
+    "code": "MC-009",
+    "name": "包装机-09",
+    "model": "PK-500",
+    "line_code": "LINE-C",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:55:00"
+  },
+  {
+    "code": "MC-010",
+    "name": "视觉检测设备-10",
+    "model": "VI-3000",
+    "line_code": "LINE-C",
+    "status": "running",
+    "last_heartbeat_at": "2026-09-15T17:36:00"
+  }
+]

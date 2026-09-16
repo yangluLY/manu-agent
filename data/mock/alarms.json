@@ -1,0 +1,402 @@
+[
+  {
+    "machine_code": "MC-009",
+    "alarm_code": "E103-010",
+    "alarm_message": "驱动电机负载超过正常范围",
+    "level": "high",
+    "started_at": "2026-08-17T05:55:09",
+    "ended_at": "2026-08-17T07:42:09"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E102-031",
+    "alarm_message": "液压系统压力低于正常范围",
+    "level": "medium",
+    "started_at": "2026-08-18T01:23:53",
+    "ended_at": "2026-08-18T04:13:53"
+  },
+  {
+    "machine_code": "MC-010",
+    "alarm_code": "E102-044",
+    "alarm_message": "液压系统压力偏低",
+    "level": "medium",
+    "started_at": "2026-08-19T09:54:50",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-006",
+    "alarm_code": "E103-038",
+    "alarm_message": "驱动电机负载超过正常范围",
+    "level": "high",
+    "started_at": "2026-08-19T10:06:35",
+    "ended_at": "2026-08-19T11:23:35"
+  },
+  {
+    "machine_code": "MC-010",
+    "alarm_code": "E301-042",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-08-19T20:42:27",
+    "ended_at": "2026-08-19T20:51:27"
+  },
+  {
+    "machine_code": "MC-008",
+    "alarm_code": "E103-007",
+    "alarm_message": "驱动电机负载超过正常范围",
+    "level": "high",
+    "started_at": "2026-08-20T08:36:14",
+    "ended_at": "2026-08-20T12:17:14"
+  },
+  {
+    "machine_code": "MC-005",
+    "alarm_code": "E401-004",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-08-20T13:22:55",
+    "ended_at": "2026-08-20T16:39:55"
+  },
+  {
+    "machine_code": "MC-006",
+    "alarm_code": "E101-013",
+    "alarm_message": "主轴温度超过设定阈值",
+    "level": "high",
+    "started_at": "2026-08-21T05:48:39",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E102-040",
+    "alarm_message": "液压系统压力低于正常范围",
+    "level": "medium",
+    "started_at": "2026-08-21T19:45:05",
+    "ended_at": "2026-08-21T21:26:05"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E103-012",
+    "alarm_message": "主轴驱动电机出现过载",
+    "level": "high",
+    "started_at": "2026-08-22T11:19:46",
+    "ended_at": "2026-08-22T13:49:46"
+  },
+  {
+    "machine_code": "MC-001",
+    "alarm_code": "E103-017",
+    "alarm_message": "驱动电机负载超过正常范围",
+    "level": "high",
+    "started_at": "2026-08-23T04:48:16",
+    "ended_at": "2026-08-23T05:23:16"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E101-043",
+    "alarm_message": "主轴轴承温度持续偏高",
+    "level": "high",
+    "started_at": "2026-08-23T10:49:31",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-009",
+    "alarm_code": "E401-009",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-08-25T00:11:17",
+    "ended_at": "2026-08-25T01:35:17"
+  },
+  {
+    "machine_code": "MC-004",
+    "alarm_code": "E401-016",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-08-26T01:14:25",
+    "ended_at": "2026-08-26T01:33:25"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E102-021",
+    "alarm_message": "液压系统压力低于正常范围",
+    "level": "medium",
+    "started_at": "2026-08-26T03:25:01",
+    "ended_at": "2026-08-26T04:13:01"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E501-005",
+    "alarm_message": "主轴振动值持续超过预警阈值",
+    "level": "critical",
+    "started_at": "2026-08-26T19:19:22",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E101-039",
+    "alarm_message": "主轴轴承温度持续偏高",
+    "level": "high",
+    "started_at": "2026-08-27T02:37:42",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-008",
+    "alarm_code": "E401-024",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-08-27T07:21:49",
+    "ended_at": "2026-08-27T09:36:49"
+  },
+  {
+    "machine_code": "MC-007",
+    "alarm_code": "E301-029",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-08-27T20:20:09",
+    "ended_at": "2026-08-27T22:25:09"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E501-015",
+    "alarm_message": "主轴振动值持续超过预警阈值",
+    "level": "critical",
+    "started_at": "2026-08-28T13:07:18",
+    "ended_at": "2026-08-28T15:43:18"
+  },
+  {
+    "machine_code": "MC-006",
+    "alarm_code": "E301-046",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-08-29T04:10:11",
+    "ended_at": "2026-08-29T07:32:11"
+  },
+  {
+    "machine_code": "MC-001",
+    "alarm_code": "E401-018",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-08-30T05:08:24",
+    "ended_at": "2026-08-30T06:11:24"
+  },
+  {
+    "machine_code": "MC-009",
+    "alarm_code": "E201-037",
+    "alarm_message": "设备传感器信号异常",
+    "level": "medium",
+    "started_at": "2026-08-30T10:43:38",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-008",
+    "alarm_code": "E102-023",
+    "alarm_message": "液压系统压力偏低",
+    "level": "medium",
+    "started_at": "2026-08-30T18:25:33",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-007",
+    "alarm_code": "E201-001",
+    "alarm_message": "设备传感器信号异常",
+    "level": "medium",
+    "started_at": "2026-08-30T23:06:20",
+    "ended_at": "2026-08-31T02:01:20"
+  },
+  {
+    "machine_code": "MC-007",
+    "alarm_code": "E301-050",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-08-31T14:49:18",
+    "ended_at": "2026-08-31T17:02:18"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E102-036",
+    "alarm_message": "液压系统压力低于正常范围",
+    "level": "medium",
+    "started_at": "2026-08-31T16:33:39",
+    "ended_at": "2026-08-31T18:13:39"
+  },
+  {
+    "machine_code": "MC-007",
+    "alarm_code": "E301-022",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-08-31T22:58:23",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E102-034",
+    "alarm_message": "液压系统压力低于正常范围",
+    "level": "medium",
+    "started_at": "2026-09-02T04:03:28",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-007",
+    "alarm_code": "E301-025",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-09-02T06:57:49",
+    "ended_at": "2026-09-02T10:08:49"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E102-048",
+    "alarm_message": "液压系统压力低于正常范围",
+    "level": "medium",
+    "started_at": "2026-09-05T09:48:47",
+    "ended_at": "2026-09-05T10:52:47"
+  },
+  {
+    "machine_code": "MC-008",
+    "alarm_code": "E101-032",
+    "alarm_message": "主轴温度超过设定阈值",
+    "level": "high",
+    "started_at": "2026-09-05T19:32:24",
+    "ended_at": "2026-09-05T21:58:24"
+  },
+  {
+    "machine_code": "MC-005",
+    "alarm_code": "E301-008",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-09-05T21:41:35",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-002",
+    "alarm_code": "E401-011",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-09-06T00:05:47",
+    "ended_at": "2026-09-06T01:46:47"
+  },
+  {
+    "machine_code": "MC-002",
+    "alarm_code": "E201-014",
+    "alarm_message": "设备传感器信号异常",
+    "level": "medium",
+    "started_at": "2026-09-07T13:31:38",
+    "ended_at": "2026-09-07T14:45:38"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E101-002",
+    "alarm_message": "主轴轴承温度持续偏高",
+    "level": "high",
+    "started_at": "2026-09-07T15:04:05",
+    "ended_at": "2026-09-07T15:32:05"
+  },
+  {
+    "machine_code": "MC-004",
+    "alarm_code": "E102-006",
+    "alarm_message": "液压系统压力偏低",
+    "level": "medium",
+    "started_at": "2026-09-07T15:14:54",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-009",
+    "alarm_code": "E103-035",
+    "alarm_message": "驱动电机负载超过正常范围",
+    "level": "high",
+    "started_at": "2026-09-08T02:32:41",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-006",
+    "alarm_code": "E102-047",
+    "alarm_message": "液压系统压力偏低",
+    "level": "medium",
+    "started_at": "2026-09-09T14:02:26",
+    "ended_at": "2026-09-09T17:11:26"
+  },
+  {
+    "machine_code": "MC-004",
+    "alarm_code": "E301-028",
+    "alarm_message": "设备工业网络通信异常",
+    "level": "medium",
+    "started_at": "2026-09-10T18:28:43",
+    "ended_at": "2026-09-10T20:57:43"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E101-027",
+    "alarm_message": "主轴轴承温度持续偏高",
+    "level": "high",
+    "started_at": "2026-09-10T20:04:11",
+    "ended_at": "2026-09-10T22:49:11"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E103-003",
+    "alarm_message": "主轴驱动电机出现过载",
+    "level": "high",
+    "started_at": "2026-09-11T04:35:03",
+    "ended_at": "2026-09-11T07:03:03"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E103-030",
+    "alarm_message": "主轴驱动电机出现过载",
+    "level": "high",
+    "started_at": "2026-09-11T08:37:03",
+    "ended_at": "2026-09-11T09:00:03"
+  },
+  {
+    "machine_code": "MC-004",
+    "alarm_code": "E401-019",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-09-11T11:04:25",
+    "ended_at": "2026-09-11T11:19:25"
+  },
+  {
+    "machine_code": "MC-005",
+    "alarm_code": "E103-049",
+    "alarm_message": "驱动电机负载超过正常范围",
+    "level": "high",
+    "started_at": "2026-09-11T15:57:53",
+    "ended_at": null
+  },
+  {
+    "machine_code": "MC-010",
+    "alarm_code": "E401-026",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-09-12T04:15:06",
+    "ended_at": "2026-09-12T05:10:06"
+  },
+  {
+    "machine_code": "MC-007",
+    "alarm_code": "E103-041",
+    "alarm_message": "驱动电机负载超过正常范围",
+    "level": "high",
+    "started_at": "2026-09-12T04:42:44",
+    "ended_at": "2026-09-12T07:56:44"
+  },
+  {
+    "machine_code": "MC-010",
+    "alarm_code": "E401-033",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-09-14T01:28:58",
+    "ended_at": "2026-09-14T04:19:58"
+  },
+  {
+    "machine_code": "MC-007",
+    "alarm_code": "E401-045",
+    "alarm_message": "设备加工物料余量不足",
+    "level": "low",
+    "started_at": "2026-09-14T16:02:42",
+    "ended_at": "2026-09-14T19:23:42"
+  },
+  {
+    "machine_code": "MC-003",
+    "alarm_code": "E102-020",
+    "alarm_message": "液压系统压力低于正常范围",
+    "level": "medium",
+    "started_at": "2026-09-15T02:55:20",
+    "ended_at": "2026-09-15T05:26:20"
+  }
+]
