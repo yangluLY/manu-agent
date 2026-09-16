@@ -2,7 +2,75 @@
   "hash": "65069e56",
   "configHash": "e195247e",
   "lockfileHash": "2d7a1d14",
-  "browserHash": "154f0fd9",
-  "optimized": {},
-  "chunks": {}
+  "browserHash": "0f54c582",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "42db6359",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "4b294e3a",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "373eb883",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "a537c045",
+      "needsInterop": false
+    },
+    "antd": {
+      "src": "../../node_modules/antd/es/index.js",
+      "file": "antd.js",
+      "fileHash": "8b896f2e",
+      "needsInterop": false
+    },
+    "antd/locale/zh_CN": {
+      "src": "../../node_modules/antd/locale/zh_CN.js",
+      "file": "antd_locale_zh_CN.js",
+      "fileHash": "a5aba1f6",
+      "needsInterop": true
+    },
+    "@ant-design/icons": {
+      "src": "../../node_modules/@ant-design/icons/es/index.js",
+      "file": "@ant-design_icons.js",
+      "fileHash": "9579680f",
+      "needsInterop": false
+    },
+    "echarts-for-react": {
+      "src": "../../node_modules/echarts-for-react/esm/index.js",
+      "file": "echarts-for-react.js",
+      "fileHash": "0c371df7",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "84babe86",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-KNY6V4ZF": {
+      "file": "chunk-KNY6V4ZF.js"
+    },
+    "chunk-4ICGPMOO": {
+      "file": "chunk-4ICGPMOO.js"
+    },
+    "chunk-HO4WEAOL": {
+      "file": "chunk-HO4WEAOL.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
 }
