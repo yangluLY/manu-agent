@@ -7,6 +7,7 @@ from apps.api.app.core.exceptions import (
     AppException,
 )
 from apps.api.app.routers import (
+    agent,
     alarms,
     machines,
     materials,
@@ -27,6 +28,10 @@ app.include_router(alarms.router)
 app.include_router(work_orders.router)
 app.include_router(materials.router)
 app.include_router(production_records.router)
+app.include_router(
+    agent.router,
+    prefix="/api/v1",
+)
 
 app.add_exception_handler(
     AppException,
