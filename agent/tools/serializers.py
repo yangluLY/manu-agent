@@ -80,3 +80,24 @@ def serialize_work_order(
         "created_at": to_json_value(work_order.created_at),
         "updated_at": to_json_value(work_order.updated_at),
     }
+
+def serialize_knowledge_search_result(
+    result: Any,
+) -> dict[str, Any]:
+    """
+    将知识库向量检索结果转换成稳定的 JSON 结构。
+    """
+
+    return {
+        "chunk_id": result.chunk_id,
+        "document_id": result.document_id,
+        "document_name": result.document_name,
+        "chunk_index": result.chunk_index,
+        "score": round(
+            float(result.score),
+            4,
+        ),
+        "content": result.content,
+        "metadata": result.metadata,
+    }
+

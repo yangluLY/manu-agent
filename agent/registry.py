@@ -7,6 +7,7 @@ from agent.tools.machine_tools import MachineTools
 from agent.tools.production_tools import ProductionTools
 from agent.tools.types import ToolResult
 from agent.tools.work_order_tools import WorkOrderTools
+from agent.tools.knowledge_tools import KnowledgeTools
 
 ToolHandler = Callable[..., ToolResult]
 ToolSchema = dict[str, Any]
@@ -79,8 +80,9 @@ def build_tool_registry(
     inventory_tools: InventoryTools,
     work_order_tools: WorkOrderTools,
     production_tools: ProductionTools,
+    knowledge_tools: KnowledgeTools,
 ) -> ToolRegistry:
-    """注册五个 MES Tool 类中供大模型调用的方法。"""
+    """注册 ManuAgent 可供大模型调用的 MES 与知识库工具。"""
     registry = ToolRegistry()
 
     registry.register(
@@ -275,6 +277,58 @@ def build_tool_registry(
                 "type",
                 "priority",
                 "description",
+            ],
+        ),
+    )
+
+    registry.register(
+        name="search_knowledge",
+        handler=knowledge_tools.search_knowledge,
+        schema=_function_schema(
+            name="search_knowledge",
+            description=(
+                "搜索 ManuAgent 企业知识库。"
+                "适用于查询设备说明书、设备故障原因、"
+                "报警处理方法、维修 SOP、操作规范、"
+                "生产 SOP 和质量规范等企业知识。"
+            ),
+            properties={
+                "query": {
+                    "type": "string",
+                    "description": (
+                        "需要检索的知识问题。"
+                        "应包含明确的设备、报警代码、"
+                        "故障现象或需要了解的操作内容。"
+                    ),
+                },
+                "top_k": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10,
+                    "default": 5,
+                    "description": (
+                        "最多返回的相关知识片段数量。"
+                    ),
+                },
+                "category": {
+                    "type": "string",
+                    "enum": [
+                        "alarm",
+                        "equipment",
+                        "sop",
+                        "quality",
+                    ],
+                    "description": (
+                        "可选知识分类。"
+                        "alarm 表示报警处理知识；"
+                        "equipment 表示设备资料；"
+                        "sop 表示操作或维修 SOP；"
+                        "quality 表示质量规范。"
+                    ),
+                },
+            },
+            required=[
+                "query",
             ],
         ),
     )

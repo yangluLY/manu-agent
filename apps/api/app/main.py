@@ -15,6 +15,9 @@ from apps.api.app.routers import (
     work_orders,
 )
 from apps.api.app.routers.health import router as health_router
+from apps.api.app.routers.knowledge import (
+    router as knowledge_router,
+)
 
 app = FastAPI(
     title="ManuAgent",
@@ -36,4 +39,8 @@ app.include_router(
 app.add_exception_handler(
     AppException,
     app_exception_handler,
+)
+app.include_router(
+    knowledge_router,
+    prefix="/api/v1",
 )
