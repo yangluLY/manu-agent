@@ -1,0 +1,263 @@
+[
+  {
+    "id": "alarm_spindle_001",
+    "query": "CNC主轴温度过高应该怎么处理？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_alarm_manual"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_spindle_002",
+    "query": "主轴发热了先检查什么？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_alarm_manual"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_spindle_003",
+    "query": "SPINDLE_TEMP_HIGH 报警怎么处理？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_alarm_manual"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_servo_001",
+    "query": "伺服过载报警一般有哪些原因？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "servo_overload_alarm"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_servo_002",
+    "query": "SERVO_OVERLOAD 出现后应该怎么排查？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "servo_overload_alarm"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_coolant_001",
+    "query": "冷却系统压力不足可能是什么原因？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "coolant_pressure_alarm"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_coolant_002",
+    "query": "COOLANT_PRESSURE_LOW 报警应该检查哪些地方？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "coolant_pressure_alarm"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_toolchanger_001",
+    "query": "自动换刀失败时应该怎么排查？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "tool_changer_alarm"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "alarm_toolchanger_002",
+    "query": "TOOL_CHANGE_ERROR 报警怎么处理？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "tool_changer_alarm"
+    ],
+    "expected_category": "alarm"
+  },
+  {
+    "id": "equipment_overview_001",
+    "query": "CNC设备通常由哪些系统组成？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_equipment_overview"
+    ],
+    "expected_category": "equipment"
+  },
+  {
+    "id": "equipment_overview_002",
+    "query": "设备运行过程中日常应该重点关注哪些项目？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_equipment_overview",
+      "cnc_daily_check_items"
+    ],
+    "expected_category": "equipment"
+  },
+  {
+    "id": "equipment_check_001",
+    "query": "CNC班前点检需要检查什么？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_daily_check_items"
+    ],
+    "expected_category": "equipment"
+  },
+  {
+    "id": "equipment_check_002",
+    "query": "设备点检发现影响生产的异常应该怎么办？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_daily_check_items"
+    ],
+    "expected_category": "equipment"
+  },
+  {
+    "id": "sop_startup_001",
+    "query": "CNC设备开机前应该检查什么？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_startup_shutdown_sop"
+    ],
+    "expected_category": "sop"
+  },
+  {
+    "id": "sop_startup_002",
+    "query": "设备停机流程是什么？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "cnc_startup_shutdown_sop"
+    ],
+    "expected_category": "sop"
+  },
+  {
+    "id": "sop_maintenance_001",
+    "query": "预防性维护前要准备哪些信息？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "preventive_maintenance_sop"
+    ],
+    "expected_category": "sop"
+  },
+  {
+    "id": "sop_maintenance_002",
+    "query": "CNC预防性维护通常检查哪些项目？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "preventive_maintenance_sop"
+    ],
+    "expected_category": "sop"
+  },
+  {
+    "id": "sop_alarm_001",
+    "query": "设备发生报警后通用处理流程是什么？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "alarm_handling_sop"
+    ],
+    "expected_category": "sop"
+  },
+  {
+    "id": "sop_workorder_001",
+    "query": "什么情况下应该创建维修工单？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "work_order_handling_sop"
+    ],
+    "expected_category": "sop"
+  },
+  {
+    "id": "sop_workorder_002",
+    "query": "维修工单优先级 high 和 urgent 怎么理解？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "work_order_handling_sop"
+    ],
+    "expected_category": "sop"
+  },
+  {
+    "id": "quality_firstarticle_001",
+    "query": "哪些情况下需要做首件检验？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "first_article_inspection"
+    ],
+    "expected_category": "quality"
+  },
+  {
+    "id": "quality_firstarticle_002",
+    "query": "首件不合格后应该怎么处理？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "first_article_inspection"
+    ],
+    "expected_category": "quality"
+  },
+  {
+    "id": "quality_nc_001",
+    "query": "发现不合格品后应该怎么处理？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "nonconforming_product_handling"
+    ],
+    "expected_category": "quality"
+  },
+  {
+    "id": "quality_nc_002",
+    "query": "同类不良连续出现时应该怎么办？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "nonconforming_product_handling"
+    ],
+    "expected_category": "quality"
+  },
+  {
+    "id": "quality_trace_001",
+    "query": "质量异常怎么结合报警和维修工单做追溯？",
+    "should_retrieve": true,
+    "expected_documents": [
+      "production_quality_traceability"
+    ],
+    "expected_category": "quality"
+  },
+  {
+    "id": "negative_hr_001",
+    "query": "公司员工每年有多少天年假？",
+    "should_retrieve": false,
+    "expected_documents": [],
+    "expected_category": null
+  },
+  {
+    "id": "negative_finance_001",
+    "query": "公司的差旅报销标准是多少？",
+    "should_retrieve": false,
+    "expected_documents": [],
+    "expected_category": null
+  },
+  {
+    "id": "negative_sales_001",
+    "query": "今年公司的销售目标是多少？",
+    "should_retrieve": false,
+    "expected_documents": [],
+    "expected_category": null
+  },
+  {
+    "id": "negative_it_001",
+    "query": "公司邮箱密码忘了怎么重置？",
+    "should_retrieve": false,
+    "expected_documents": [],
+    "expected_category": null
+  },
+  {
+    "id": "negative_admin_001",
+    "query": "公司食堂今天中午吃什么？",
+    "should_retrieve": false,
+    "expected_documents": [],
+    "expected_category": null
+  }
+]
