@@ -24,7 +24,7 @@ import { PageTitle } from '../components/PageTitle'
 import { RequestError } from '../components/RequestError'
 import { StatusTag } from '../components/StatusTag'
 import { useSelection } from '../context/SelectionContext'
-import { getErrorMessage, mesApi } from '../services/api'
+import { getErrorMessage, mesApi } from '../api'
 import type { Alarm, Machine, ProductionQuery, ProductionRecord, ProductionSummary } from '../types/api'
 import { alarmLevelMap, formatDateTime, formatNumber } from '../utils/format'
 

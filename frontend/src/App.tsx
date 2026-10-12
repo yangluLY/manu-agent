@@ -6,6 +6,7 @@ import { ProductionPage } from './pages/ProductionPage'
 import { WorkOrdersPage } from './pages/WorkOrdersPage'
 import { ChatPage } from './pages/ChatPage'
 import { ConversationHistoryPage } from './pages/ConversationHistoryPage'
+import { BIPage } from './pages/BIPage'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="chat" element={<ChatPage />} />
         <Route path="chat/:conversationId" element={<ChatPage />} />
         <Route path="conversations" element={<ConversationHistoryPage />} />
+        <Route path="bi" element={<BIPage />} />
         <Route path="*" element={<Navigate to="/equipment" replace />} />
       </Route>
     </Routes>

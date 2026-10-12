@@ -1,6 +1,7 @@
 import {
   AlertOutlined,
   ApartmentOutlined,
+  BarChartOutlined,
   DatabaseOutlined,
   HistoryOutlined,
   MenuFoldOutlined,
@@ -11,13 +12,14 @@ import {
 import { Badge, Button, Layout, Menu } from 'antd'
 import { useEffect, useState } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { mesApi } from '../services/api'
+import { mesApi } from '../api'
 import { WorkflowBar } from '../components/WorkflowBar'
 
 const { Header, Sider, Content } = Layout
 
 const menuItems = [
   { key: '/chat', icon: <RobotOutlined />, label: 'AI 对话' },
+  { key: '/bi', icon: <BarChartOutlined />, label: '智能 BI' },
   { key: '/conversations', icon: <HistoryOutlined />, label: '对话历史' },
   { key: '/equipment', icon: <ApartmentOutlined />, label: '产线与设备' },
   { key: '/production', icon: <AlertOutlined />, label: '报警与生产' },
@@ -33,7 +35,8 @@ export function AppLayout() {
   const selectedMenuKey = location.pathname.startsWith('/chat')
     ? '/chat'
     : location.pathname
-  const isAgentPage = selectedMenuKey === '/chat' || selectedMenuKey === '/conversations'
+  const isAgentPage =
+    selectedMenuKey === '/chat' || selectedMenuKey === '/conversations' || selectedMenuKey === '/bi'
 
   useEffect(() => {
     let active = true
@@ -48,7 +51,7 @@ export function AppLayout() {
 
   return (
     <Layout className="app-shell">
-      <Sider collapsible collapsed={collapsed} trigger={null} theme="dark">
+      <Sider className="app-sider" collapsible collapsed={collapsed} trigger={null} theme="dark">
         <div className="brand">🏭️{collapsed ? 'MA' : 'ManuAgent'}</div>
         <Menu
           theme="dark"
@@ -58,7 +61,7 @@ export function AppLayout() {
           onClick={({ key }) => navigate(key)}
         />
       </Sider>
-      <Layout>
+      <Layout className="app-main">
         <Header className="app-header">
           <div className="header-left">
             <Button

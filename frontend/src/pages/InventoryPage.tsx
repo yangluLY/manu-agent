@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { PageTitle } from '../components/PageTitle'
 import { RequestError } from '../components/RequestError'
 import { useSelection } from '../context/SelectionContext'
-import { getErrorMessage, mesApi } from '../services/api'
+import { getErrorMessage, mesApi } from '../api'
 import type { Material } from '../types/api'
 import { formatNumber } from '../utils/format'
 

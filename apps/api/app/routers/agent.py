@@ -5,10 +5,20 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 
-from agent.factory import create_manu_agent
+from agent.analytics.pipeline import (
+    BIPipeline,
+    convert_natural_language_to_bi,
+)
+from agent.analytics.schemas import BIPipelineResult
+from agent.factory import create_bi_pipeline, create_manu_agent
+from agent.sql.errors import (
+    SQLRetryExhaustedError,
+    SQLValidationError,
+)
 from apps.api.app.schemas.agent import (
     AgentChatRequest,
     AgentChatResponse,
+    BIQueryRequest,
 )
 from services.database.session import get_db
 
@@ -19,6 +29,12 @@ router = APIRouter(
     prefix="/agent",
     tags=["Agent"],
 )
+
+
+def get_bi_pipeline(
+    db: Session = Depends(get_db),
+) -> BIPipeline:
+    return create_bi_pipeline(db)
 
 
 @router.post(
@@ -53,6 +69,41 @@ def chat(
             status_code=500,
             detail="Agent request failed",
         )
+
+
+@router.post(
+    "/bi/query",
+    response_model=BIPipelineResult,
+)
+def query_bi(
+    request: BIQueryRequest,
+    pipeline: BIPipeline = Depends(get_bi_pipeline),
+):
+    """执行自然语言到 ECharts 配置的完整只读 BI 链路。"""
+
+    try:
+        return convert_natural_language_to_bi(
+            request.question,
+            pipeline=pipeline,
+        )
+    except SQLValidationError as error:
+        logger.warning("Unsafe SQL rejected: %s", error)
+        raise HTTPException(
+            status_code=400,
+            detail="Generated SQL did not pass the safety check",
+        ) from error
+    except SQLRetryExhaustedError as error:
+        logger.exception("BI SQL retries exhausted")
+        raise HTTPException(
+            status_code=422,
+            detail="Unable to execute a valid query after correction",
+        ) from error
+    except Exception as error:
+        logger.exception("BI query failed")
+        raise HTTPException(
+            status_code=500,
+            detail="BI query failed",
+        ) from error
 
 
 @router.post("/chat/stream")

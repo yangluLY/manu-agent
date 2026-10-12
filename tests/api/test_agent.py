@@ -4,6 +4,13 @@ import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
+from agent.analytics.schemas import (
+    BIPipelineResult,
+    ChartSeries,
+    ChartSpec,
+    DataAnalysisResult,
+)
+from agent.sql.schemas import QueryResult
 from apps.api.app.routers import agent as agent_router
 from services.database.session import get_db
 
@@ -159,3 +166,57 @@ def test_agent_stream_encodes_runtime_failure_as_error_event(agent_client, monke
         "type": "error",
         "message": "Agent request failed",
     }
+
+
+def test_bi_query_returns_echarts_option(agent_client, monkeypatch):
+    query_result = QueryResult(
+        columns=["machine_code", "alarm_count"],
+        rows=[{"machine_code": "MC-003", "alarm_count": 12}],
+        row_count=1,
+    )
+
+    class StubPipeline:
+        def run(self, question):
+            return BIPipelineResult(
+                question=question,
+                sql="SELECT 'MC-003' AS machine_code, 12 AS alarm_count",
+                data=query_result,
+                analysis=DataAnalysisResult(
+                    summary="MC-003 报警次数最多。",
+                ),
+                chart=ChartSpec(
+                    type="bar",
+                    title="设备报警次数 Top 5",
+                    x_field="machine_code",
+                    y_fields=["alarm_count"],
+                    series=[
+                        ChartSeries(
+                            name="报警次数",
+                            field="alarm_count",
+                        )
+                    ],
+                    data=query_result.rows,
+                ),
+                echarts_option={
+                    "xAxis": {"type": "category"},
+                    "yAxis": {"type": "value"},
+                    "series": [{"type": "bar"}],
+                },
+            )
+
+    monkeypatch.setattr(
+        agent_router,
+        "create_bi_pipeline",
+        lambda _db: StubPipeline(),
+    )
+
+    response = agent_client.post(
+        "/api/v1/agent/bi/query",
+        json={"question": "查询报警次数最多的5台设备"},
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["data"]["rows"][0]["machine_code"] == "MC-003"
+    assert payload["analysis"]["summary"] == "MC-003 报警次数最多。"
+    assert payload["echarts_option"]["series"][0]["type"] == "bar"
