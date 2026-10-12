@@ -2,8 +2,10 @@ import {
   AlertOutlined,
   ApartmentOutlined,
   DatabaseOutlined,
+  HistoryOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  RobotOutlined,
   ToolOutlined,
 } from '@ant-design/icons'
 import { Badge, Button, Layout, Menu } from 'antd'
@@ -15,6 +17,8 @@ import { WorkflowBar } from '../components/WorkflowBar'
 const { Header, Sider, Content } = Layout
 
 const menuItems = [
+  { key: '/chat', icon: <RobotOutlined />, label: 'AI 对话' },
+  { key: '/conversations', icon: <HistoryOutlined />, label: '对话历史' },
   { key: '/equipment', icon: <ApartmentOutlined />, label: '产线与设备' },
   { key: '/production', icon: <AlertOutlined />, label: '报警与生产' },
   { key: '/inventory', icon: <DatabaseOutlined />, label: '库存管理' },
@@ -26,6 +30,10 @@ export function AppLayout() {
   const [apiOnline, setApiOnline] = useState<boolean | null>(null)
   const location = useLocation()
   const navigate = useNavigate()
+  const selectedMenuKey = location.pathname.startsWith('/chat')
+    ? '/chat'
+    : location.pathname
+  const isAgentPage = selectedMenuKey === '/chat' || selectedMenuKey === '/conversations'
 
   useEffect(() => {
     let active = true
@@ -41,11 +49,11 @@ export function AppLayout() {
   return (
     <Layout className="app-shell">
       <Sider collapsible collapsed={collapsed} trigger={null} theme="dark">
-        <div className="brand">{collapsed ? 'MA' : 'ManuAgent'}</div>
+        <div className="brand">🏭️{collapsed ? 'MA' : 'ManuAgent'}</div>
         <Menu
           theme="dark"
           mode="inline"
-          selectedKeys={[location.pathname]}
+          selectedKeys={[selectedMenuKey]}
           items={menuItems}
           onClick={({ key }) => navigate(key)}
         />
@@ -59,14 +67,14 @@ export function AppLayout() {
               icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
               onClick={() => setCollapsed((value) => !value)}
             />
-            <span className="factory-name">当前工厂：杭州工厂</span>
+            {/* <span className="factory-name">当前工厂：杭州工厂</span> */}
           </div>
           <Badge
             status={apiOnline === null ? 'processing' : apiOnline ? 'success' : 'error'}
             text={apiOnline === null ? '检测 FastAPI' : apiOnline ? 'FastAPI 已连接' : 'FastAPI 未连接'}
           />
         </Header>
-        <WorkflowBar />
+        {!isAgentPage ? <WorkflowBar /> : null}
         <Content className="app-content">
           <Outlet />
         </Content>

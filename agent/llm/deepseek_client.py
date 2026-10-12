@@ -65,6 +65,42 @@ class DeepSeekClient:
             ToolRegistry 提供的 Responses API Tool Schema。
         """
 
+        request = self._build_request(
+            input_items=input_items,
+            instructions=instructions,
+            tools=tools,
+        )
+
+        return self.client.responses.create(
+            **request
+        )
+
+    def create_response_stream(
+        self,
+        *,
+        input_items: str | list[dict[str, Any]],
+        instructions: str,
+        tools: list[dict[str, Any]] | None = None,
+    ):
+        """以 DeepSeek Responses API 语义事件流返回模型输出。"""
+        request = self._build_request(
+            input_items=input_items,
+            instructions=instructions,
+            tools=tools,
+        )
+
+        return self.client.responses.create(
+            **request,
+            stream=True,
+        )
+
+    def _build_request(
+        self,
+        *,
+        input_items: str | list[dict[str, Any]],
+        instructions: str,
+        tools: list[dict[str, Any]] | None,
+    ) -> dict[str, Any]:
         request: dict[str, Any] = {
             "model": self.model,
             "instructions": instructions,
@@ -80,6 +116,4 @@ class DeepSeekClient:
             request["tools"] = tools
             request["tool_choice"] = "auto"
 
-        return self.client.responses.create(
-            **request
-        )
+        return request
