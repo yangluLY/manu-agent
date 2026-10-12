@@ -368,6 +368,43 @@ stock_qty < safe_stock
 http://127.0.0.1:8000/docs
 ```
 
+## 智能 BI
+
+V3 BI 管线已串联：
+
+```text
+自然语言
+  → Schema Discovery
+  → Text-to-SQL
+  → SQL Safety
+  → SQL Executor
+  → Retry / Correction
+  → Data Analyst
+  → Chart Generator
+  → ECharts option
+```
+
+启动前后端后可在前端“智能 BI”页面输入：
+
+```text
+查询报警次数最多的5台设备
+```
+
+也可以直接调用接口：
+
+```http
+POST /api/v1/agent/bi/query
+Content-Type: application/json
+
+{
+  "question": "查询报警次数最多的5台设备"
+}
+```
+
+接口会同时返回生成的只读 SQL、查询数据、分析结论、图表规格和可直接传给
+`echarts-for-react` 的 `echarts_option`。当结果不适合绘图时，图表类型为
+`table`，`echarts_option` 为 `null`，前端自动降级为数据表格。
+
 ---
 
 # Testing

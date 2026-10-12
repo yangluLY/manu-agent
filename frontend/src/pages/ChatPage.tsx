@@ -1,9 +1,9 @@
-import { EditOutlined, RedditSquareFilled, RobotOutlined, SendOutlined, StopOutlined, UserOutlined } from '@ant-design/icons'
+import { EditOutlined, RedditSquareFilled, SendOutlined, StopOutlined } from '@ant-design/icons'
 import { Alert, Avatar, Button, Empty, Input, Spin, Tag, Typography } from 'antd'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ConversationSidebar } from '../components/ConversationSidebar'
-import { agentApi, getErrorMessage } from '../services/api'
+import { agentApi, getErrorMessage } from '../api'
 import {
   createConversation,
   createMessage,

@@ -28,3 +28,12 @@ class AgentChatRequest(BaseModel):
 
 class AgentChatResponse(BaseModel):
     answer: str
+
+
+class BIQueryRequest(BaseModel):
+    question: str = Field(
+        ...,
+        min_length=1,
+        max_length=2000,
+        description="需要转换为 SQL 并生成图表的自然语言问题",
+    )
