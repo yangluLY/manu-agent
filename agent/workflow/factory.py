@@ -1,5 +1,10 @@
 
+from sqlalchemy.orm import Session
+
 from agent.llm.deepseek_client import DeepSeekClient
+from agent.workflow.executors.factory import (
+    create_real_step_runner,
+)
 from agent.workflow.graph import build_workflow
 
 
@@ -7,10 +12,8 @@ def create_deepseek_invoke(
     llm: DeepSeekClient,
 ):
     """
-    将现有 DeepSeekClient 适配为
-    LangGraph Router 所需的调用接口。
-
-    llm_invoke(system_prompt, user_input) -> str
+    将 DeepSeekClient 适配成
+    workflow 使用的统一调用接口。
     """
 
     def llm_invoke(
@@ -27,7 +30,7 @@ def create_deepseek_invoke(
 
         if not content:
             raise ValueError(
-                "DeepSeek Router 返回空内容"
+                "DeepSeek 返回空内容"
             )
 
         return content
@@ -37,11 +40,13 @@ def create_deepseek_invoke(
 
 def get_workflow(
     llm: DeepSeekClient | None = None,
+    step_runner=None,
 ):
     """
-    创建 V4 LangGraph 工作流。
+    创建 ManuAgent V4 工作流。
 
-    复用 ManuAgent 已有的 DeepSeekClient。
+    V4.4.1 默认使用 Mock Executor。
+    V4.4.2 可以注入真实 Agent Executor。
     """
 
     if llm is None:
@@ -49,4 +54,30 @@ def get_workflow(
 
     llm_invoke = create_deepseek_invoke(llm)
 
-    return build_workflow(llm_invoke)
+    return build_workflow(
+        llm_invoke=llm_invoke,
+        step_runner=step_runner,
+    )
+
+
+def get_real_workflow(
+    db: Session,
+):
+    """
+    创建真实业务 LangGraph 工作流。
+
+    注意：数据库 Session 必须在整个 invoke
+    执行期间保持有效。
+    """
+
+    llm = DeepSeekClient()
+
+    step_runner = create_real_step_runner(
+        db=db,
+        llm=llm,
+    )
+
+    return get_workflow(
+        llm=llm,
+        step_runner=step_runner,
+    )

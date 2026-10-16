@@ -41,8 +41,10 @@ def create_planner_node(
         execution_plan = parse_plan(content)
 
         return {
-            "plan": execution_plan.steps,
-            "current_step": 0,
+             "plan": execution_plan.steps,
+             "current_step": 0,
+             "step_results": [],
+             "result": "",
         }
 
     return planner_node

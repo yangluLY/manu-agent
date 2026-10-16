@@ -1,11 +1,11 @@
 
 import json
+from unittest import result  # noqa: F401
 
 import pytest
 
 from agent.workflow.graph import build_workflow
 from agent.workflow.nodes.router import parse_route
-
 
 VALID_PLAN = {
     "steps": [
@@ -77,11 +77,31 @@ def test_workflow_routes(route):
 
     # 4. 验证执行分支
     if route == "complex":
+
+        # Planner 应生成三个步骤
         assert len(result["plan"]) == 3
-        assert result["current_step"] == 0
-        assert "Step 1" in result["final_answer"]
-        assert "Step 3" in result["final_answer"]
-        assert "尚未执行" in result["final_answer"]
+
+        # 工作流应该执行全部步骤
+        assert result["current_step"] == len(result["plan"])
+
+        # 执行记录数量正确
+        assert len(result["step_results"]) == len(result["plan"])
+
+        # 所有步骤执行成功
+        assert all(
+            item["status"] == "success"
+            for item in result["step_results"]
+        )
+
+        # 最后一步为 Summary
+        assert result["step_results"][-1]["agent"] == "summary"
+
+        # Response 返回 Summary 的执行结果
+        assert result["final_answer"] == (
+            result["step_results"][-1]["output"]
+        )
+
+        assert result["final_answer"].strip()
 
     else:
         assert "模拟执行" in result["final_answer"]

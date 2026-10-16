@@ -121,8 +121,52 @@ def test_workflow_planner():
 
     assert result["route"] == "complex"
     assert len(result["plan"]) == 4
-    assert result["current_step"] == 0
+    # V4.4：所有计划步骤应该执行完成
+    assert result["current_step"] == len(result["plan"])
 
-    assert "Step 1" in result["final_answer"]
-    assert "Step 4" in result["final_answer"]
-    assert "尚未执行" in result["final_answer"]
+    # 每一个计划步骤都有执行结果
+    assert len(result["step_results"]) == len(result["plan"])
+
+    # 所有步骤执行成功
+    assert all(
+        item["status"] == "success"
+        for item in result["step_results"]
+    )
+
+    # 1. Router 正确识别复合任务
+    assert result["route"] == "complex"
+
+    # 2. Planner 成功生成四个步骤
+    assert len(result["plan"]) == 4
+
+    # 3. Step Executor 执行完成
+    assert result["current_step"] == len(result["plan"])
+
+    # 4. 所有步骤都有执行记录
+    assert len(result["step_results"]) == len(result["plan"])
+
+    # 5. 检查步骤执行顺序
+    assert [
+        item["agent"]
+        for item in result["step_results"]
+    ] == [
+        "mes",
+        "bi",
+        "rag",
+        "summary",
+    ]
+
+    # 6. 所有步骤成功
+    assert all(
+        item["status"] == "success"
+        for item in result["step_results"]
+    )
+
+    # 7. 最终回答来自 Summary
+    assert result["step_results"][-1]["agent"] == "summary"
+
+    assert result["final_answer"] == (
+        result["step_results"][-1]["output"]
+    )
+
+    assert result["final_answer"].strip()
