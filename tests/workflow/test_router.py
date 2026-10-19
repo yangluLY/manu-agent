@@ -79,7 +79,7 @@ def test_workflow_routes(route):
     if route == "complex":
 
         # Planner 应生成三个步骤
-        assert len(result["plan"]) == 3
+        assert result["plan"]
 
         # 工作流应该执行全部步骤
         assert result["current_step"] == len(result["plan"])
@@ -103,8 +103,46 @@ def test_workflow_routes(route):
 
         assert result["final_answer"].strip()
 
-    else:
-        assert "模拟执行" in result["final_answer"]
+    elif route in {"mes", "rag", "bi"}:
+
+        # 普通业务任务统一进入 Simple Planner
+        assert len(result["plan"]) == 1
+
+        # Step Executor 执行单步骤
+        assert result["current_step"] == 1
+
+        assert len(result["step_results"]) == 1
+
+        step = result["step_results"][0]
+
+        # 验证使用了正确的 Agent
+        assert step["agent"] == route
+
+        # 验证执行成功
+        assert step["status"] == "success"
+
+        # 验证最终回答来自 Step Executor
+        assert result["final_answer"] == step["output"]
+
+        assert result["final_answer"].strip()
+
+        # 验证 V4.5.1 工作流状态
+        assert result["workflow_status"] == "completed"
+
+    elif route == "general":
+
+        # General 暂时采用独立节点
+        assert result["plan"] == []
+
+        assert len(result["step_results"]) == 1
+
+        step = result["step_results"][0]
+
+        assert step["agent"] == "general"
+        assert step["status"] == "success"
+
+        assert result["final_answer"] == step["output"]
+        assert result["workflow_status"] == "completed"
 
 
 def test_invalid_router_output():

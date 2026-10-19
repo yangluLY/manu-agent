@@ -1,4 +1,5 @@
-from typing import Literal, TypedDict
+
+from typing import Literal, NotRequired, TypedDict
 
 from agent.workflow.schemas.plan import PlanStep
 
@@ -10,8 +11,15 @@ RouteType = Literal[
     "complex",
 ]
 
+ApprovalStatus = Literal[
+    "not_required",
+    "approved",
+    "rejected",
+]
+
 
 class WorkflowState(TypedDict):
+    # 用户问题
     user_input: str
 
     # Router
@@ -22,11 +30,18 @@ class WorkflowState(TypedDict):
     plan: list[PlanStep]
     current_step: int
 
-    # V4.4 执行记录
+    # Executor
     step_results: list[dict]
-
-    # 当前执行结果
     result: str
 
-    # 最终回答
+    # Response
     final_answer: str
+
+    # V4.5.1 新增
+    workflow_id: NotRequired[str]
+    workflow_status: NotRequired[str]
+    execution_events: NotRequired[list[dict]]
+
+
+    # V4.7.3 人工审批
+    approval_status: NotRequired[ApprovalStatus]
