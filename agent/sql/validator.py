@@ -1,5 +1,6 @@
 import sqlglot
 from sqlglot import exp
+from sqlglot.optimizer.scope import traverse_scope
 
 from agent.sql.policies import (
     READ_ONLY_ALLOWED_TABLES,
@@ -135,16 +136,37 @@ class SQLValidator:
         errors: list[str],
     ) -> None:
         """
-        SQL 只能访问白名单中的业务表。
+        校验 SQL 实际访问的物理表。
+
+        支持：
+        - 普通 SELECT
+        - JOIN
+        - CTE (WITH ... AS)
+        - 子查询
+
+        CTE 名称不需要加入表白名单。
         """
 
-        tables = {
-            table.name
-            for table in statement.find_all(exp.Table)
+        physical_tables: set[str] = set()
+
+        # 基于 SQLGlot 的 Scope 分析真实数据来源
+        for scope in traverse_scope(statement):
+
+            for _, source in scope.selected_sources.values():
+
+                if isinstance(source, exp.Table):
+                    physical_tables.add(
+                        source.name.lower()
+                    )
+
+        # 表白名单统一为小写
+        allowed_tables = {
+            name.lower()
+            for name in self.allowed_tables
         }
 
         unauthorized_tables = (
-            tables - self.allowed_tables
+            physical_tables - allowed_tables
         )
 
         if unauthorized_tables:

@@ -3,6 +3,7 @@ import json
 from agent.llm.deepseek_client import DeepSeekClient
 from agent.sql.prompt import (
     SQL_GENERATION_SYSTEM_PROMPT,
+    SQL_SCHEMA_RULES,
     build_sql_generation_prompt,
 )
 from agent.sql.schema_provider import SchemaProvider
@@ -62,7 +63,11 @@ class SQLGenerator:
 
         response = self.llm.create_response(
             input_items=user_prompt,
-            instructions=SQL_GENERATION_SYSTEM_PROMPT,
+            instructions=(
+                SQL_GENERATION_SYSTEM_PROMPT
+                + "\n\n"
+                + SQL_SCHEMA_RULES
+            ),
             tools=None,
         )
 
