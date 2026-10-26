@@ -83,7 +83,7 @@ export function AppLayout() {
           </Button>
           {/* <Badge
             status={apiOnline === null ? 'processing' : apiOnline ? 'success' : 'error'}
-            text={apiOnline === null ? '检测 FastAPI' : apiOnline ? 'FastAPI 已连接' : 'FastAPI 未连接'}
+            text={apiOnline === null ? '未连接' : apiOnline ? '服务已启动' : '未连接'}
           /> */}
         </Header>
         {!isAgentPage ? <WorkflowBar /> : null}

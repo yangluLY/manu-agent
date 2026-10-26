@@ -15,11 +15,21 @@ from agent.workflow.mappers.response_mapper import (
 from agent.workflow.persistence.postgres import (
     build_thread_config,
 )
+from agent.workflow.persistence.thread_store import (
+    WorkflowThreadStore,
+)
 from agent.workflow.streaming.sse_service import (
     stream_workflow_events,
 )
+from apps.api.app.dependencies.auth import (
+    CurrentUser,
+    get_current_user,
+)
 from apps.api.app.dependencies.workflow import (
     get_workflow_runtime,
+)
+from apps.api.app.dependencies.workflow_store import (
+    get_thread_store,
 )
 from apps.api.app.schemas.workflow import (
     WorkflowChatRequest,
@@ -64,6 +74,8 @@ def workflow_health():
 def workflow_chat(
     request: WorkflowChatRequest,
     workflow=Depends(get_workflow_runtime),
+    user: CurrentUser = Depends(get_current_user),
+    thread_store: WorkflowThreadStore = Depends(get_thread_store),
 ):
     message = request.message.strip()
 
@@ -75,6 +87,11 @@ def workflow_chat(
 
     thread_id = str(uuid4())
     config = build_thread_config(thread_id)
+    
+    thread_store.register(
+        thread_id=thread_id,
+        owner_id=user.user_id,
+    )
 
     try:
         result = workflow.invoke(
@@ -119,7 +136,9 @@ def workflow_chat(
 )
 def workflow_chat_stream(
     request: WorkflowChatRequest,
-    workflow=Depends(get_workflow_runtime),
+    workflow=Depends(get_workflow_runtime),   
+    user: CurrentUser = Depends(get_current_user),
+    thread_store: WorkflowThreadStore = Depends(get_thread_store),
 ):
     """
     V4.8.2 SSE 流式工作流。
@@ -145,6 +164,10 @@ def workflow_chat_stream(
         initial_state=build_initial_state(
             message
         ),
+    )
+    thread_store.register(
+        thread_id=thread_id,
+        owner_id=user.user_id,
     )
 
     return StreamingResponse(

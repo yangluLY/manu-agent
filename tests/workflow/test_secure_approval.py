@@ -1,8 +1,9 @@
-
 import json
+import os
 from uuid import uuid4
 
 import pytest
+from dotenv import load_dotenv
 from langgraph.checkpoint.memory import InMemorySaver
 
 from agent.workflow.graph import build_workflow
@@ -19,6 +20,41 @@ from agent.workflow.persistence.secure_approval import (
     SecureApprovalService,
 )
 
+
+@pytest.fixture(scope="module")
+def approval_test_dsn():
+    """
+    初始化审批测试数据库。
+
+    一个测试模块只执行一次。
+    """
+    load_dotenv()
+
+    dsn = os.getenv("TEST_APPROVAL_DSN")
+
+    if not dsn:
+        pytest.skip(
+            "未配置 TEST_APPROVAL_DSN"
+        )
+
+    store = ApprovalStore(dsn=dsn)
+
+    # 防止误连正式数据库
+    with store.connect() as conn:
+        database_name = conn.execute(
+            "SELECT current_database()"
+        ).fetchone()[0]
+
+    if not database_name.endswith("_test"):
+        raise RuntimeError(
+            f"测试必须使用独立测试数据库，"
+            f"当前连接：{database_name}"
+        )
+
+    # 初始化审批状态表 + 审批审计表
+    store.setup()
+
+    return dsn
 
 def mock_llm(system_prompt, user_input):
     if "任务路由器" in system_prompt:
@@ -44,16 +80,15 @@ def initial_state():
 
 
 @pytest.fixture
-def approval_context(monkeypatch):
-    # 测试需要显式提供独立数据库 DSN
-    import os
+def approval_context(approval_test_dsn):
+    """
+    为每个测试创建独立的待审批 Workflow。
 
-    dsn = os.getenv("TEST_APPROVAL_DSN")
-
-    if not dsn:
-        pytest.skip(
-            "未设置 TEST_APPROVAL_DSN，跳过数据库集成测试"
-        )
+    使用：
+    - LangGraph InMemorySaver
+    - PostgreSQL ApprovalStore
+    - Mock MES Step Runner
+    """
 
     calls = []
 
@@ -82,7 +117,9 @@ def approval_context(monkeypatch):
         .value["workflow_id"]
     )
 
-    store = ApprovalStore(dsn=dsn)
+    store = ApprovalStore(
+        dsn=approval_test_dsn,
+    )
 
     service = SecureApprovalService(
         workflow=workflow,
@@ -98,6 +135,7 @@ def approval_context(monkeypatch):
         "workflow_id": workflow_id,
         "calls": calls,
     }
+
 
 
 def approver():

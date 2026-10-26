@@ -4,11 +4,45 @@ from uuid import uuid4
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
+from apps.api.app.dependencies.auth import (
+    CurrentUser,
+    get_current_user,
+)
 from apps.api.app.dependencies.workflow import (
     get_workflow_runtime,
 )
+from apps.api.app.dependencies.workflow_store import (
+    get_thread_store,
+)
 from apps.api.app.routers.workflow import router
 
+TEST_USER = CurrentUser(
+    user_id="test-workflow-user",
+    roles=frozenset({"viewer"}),
+)
+class FakeThreadStore:
+    def __init__(self):
+        self.records = {}
+
+    def register(
+        self,
+        thread_id: str,
+        owner_id: str,
+    ):
+        existing = self.records.get(thread_id)
+
+        if existing is not None and existing != owner_id:
+            raise ValueError("线程归属冲突")
+
+        self.records[thread_id] = owner_id
+
+    def assert_owner(
+        self,
+        thread_id: str,
+        user_id: str,
+    ):
+        if self.records.get(thread_id) != user_id:
+            raise PermissionError("工作流不存在或无访问权限")
 
 class MockWorkflow:
     def invoke(self, state, config):
@@ -51,6 +85,13 @@ def create_test_client(
     app.dependency_overrides[
         get_workflow_runtime
     ] = lambda: mock
+    app.dependency_overrides[
+        get_current_user
+    ] = lambda: TEST_USER
+
+    app.dependency_overrides[
+        get_thread_store
+    ] = lambda: FakeThreadStore()
 
     return TestClient(app)
 

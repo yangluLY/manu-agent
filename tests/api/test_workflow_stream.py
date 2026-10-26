@@ -4,10 +4,37 @@ import json
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
+from apps.api.app.dependencies.auth import (
+    CurrentUser,
+    get_current_user,
+)
 from apps.api.app.dependencies.workflow import (
     get_workflow_runtime,
 )
-from apps.api.app.routers.workflow import router
+from apps.api.app.dependencies.workflow_store import (
+    get_thread_store,
+)
+from apps.api.app.routers.workflow import (
+    router as workflow_router,
+)
+
+TEST_USER = CurrentUser(
+    user_id="test-sse-user",
+    roles=frozenset({"viewer"}),
+)
+
+
+class FakeThreadStore:
+    def __init__(self):
+        self.records = {}
+
+    def register(
+        self,
+        thread_id: str,
+        owner_id: str,
+    ):
+        self.records[thread_id] = owner_id
+
 
 
 class MockWorkflow:
@@ -83,24 +110,32 @@ class MockWorkflow:
 
 
 def create_client(workflow=None):
+    if workflow is None:
+        workflow = MockWorkflow()
+
     app = FastAPI()
 
     app.include_router(
-        router,
+        workflow_router,
         prefix="/api/v1",
     )
 
-    instance = (
-        workflow
-        if workflow is not None
-        else MockWorkflow()
-    )
+    fake_thread_store = FakeThreadStore()
+
+    app.dependency_overrides[
+        get_current_user
+    ] = lambda: TEST_USER
 
     app.dependency_overrides[
         get_workflow_runtime
-    ] = lambda: instance
+    ] = lambda: workflow
+
+    app.dependency_overrides[
+        get_thread_store
+    ] = lambda: fake_thread_store
 
     return TestClient(app)
+
 
 
 def parse_sse(text):
