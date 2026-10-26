@@ -9,10 +9,12 @@ from apps.api.app.core.exceptions import (
 from apps.api.app.routers import (
     agent,
     alarms,
+    auth,
     machines,
     materials,
     production_records,
     work_orders,
+    workflow,
 )
 from apps.api.app.routers.health import router as health_router
 from apps.api.app.routers.knowledge import (
@@ -42,5 +44,15 @@ app.add_exception_handler(
 )
 app.include_router(
     knowledge_router,
+    prefix="/api/v1",
+)
+
+app.include_router(
+    workflow.router,
+    prefix="/api/v1",
+)
+
+app.include_router(
+    auth.router,
     prefix="/api/v1",
 )

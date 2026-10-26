@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { mesApi } from '../api'
 import { WorkflowBar } from '../components/WorkflowBar'
+import { useAuth } from '../context/AuthContext'
 
 const { Header, Sider, Content } = Layout
 
@@ -32,6 +33,11 @@ export function AppLayout() {
   const [apiOnline, setApiOnline] = useState<boolean | null>(null)
   const location = useLocation()
   const navigate = useNavigate()
+  const { logout } = useAuth()
+  function handleLogout() {
+    logout()
+    navigate('/login', { replace: true })
+  }
   const selectedMenuKey = location.pathname.startsWith('/chat')
     ? '/chat'
     : location.pathname
@@ -72,10 +78,13 @@ export function AppLayout() {
             />
             {/* <span className="factory-name">当前工厂：杭州工厂</span> */}
           </div>
-          <Badge
+          <Button onClick={handleLogout}>
+            退出登录
+          </Button>
+          {/* <Badge
             status={apiOnline === null ? 'processing' : apiOnline ? 'success' : 'error'}
             text={apiOnline === null ? '检测 FastAPI' : apiOnline ? 'FastAPI 已连接' : 'FastAPI 未连接'}
-          />
+          /> */}
         </Header>
         {!isAgentPage ? <WorkflowBar /> : null}
         <Content className="app-content">
