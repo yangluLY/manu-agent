@@ -34,6 +34,66 @@ class ApprovalStore:
             self.dsn,
             autocommit=False,
         )
+    
+    def setup(self) -> None:
+        """
+        初始化审批记录表和审计表。
+
+        仅负责建表，不删除已有数据。
+        可重复执行。
+        """
+        with self.connect() as conn:
+            conn.execute(
+                """
+                CREATE TABLE IF NOT EXISTS workflow_approvals (
+                    thread_id TEXT PRIMARY KEY,
+                    workflow_id TEXT NOT NULL,
+                    status TEXT NOT NULL DEFAULT 'pending',
+                    approved BOOLEAN,
+                    approver_id TEXT,
+                    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+                    decided_at TIMESTAMPTZ,
+
+                    CONSTRAINT ck_workflow_approvals_status
+                    CHECK (status IN ('pending', 'consumed'))
+                )
+                """
+            )
+
+            conn.execute(
+                """
+                CREATE INDEX IF NOT EXISTS
+                    idx_workflow_approvals_status
+                ON workflow_approvals (status)
+                """
+            )
+
+            conn.execute(
+                """
+                CREATE TABLE IF NOT EXISTS workflow_approval_audit (
+                    id BIGSERIAL PRIMARY KEY,
+                    thread_id TEXT NOT NULL,
+                    workflow_id TEXT NOT NULL,
+                    actor_id TEXT NOT NULL,
+                    decision TEXT NOT NULL,
+                    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+                    CONSTRAINT ck_workflow_approval_audit_decision
+                    CHECK (decision IN ('approved', 'rejected'))
+                )
+                """
+            )
+
+            conn.execute(
+                """
+                CREATE INDEX IF NOT EXISTS
+                    idx_workflow_approval_audit_thread
+                ON workflow_approval_audit (
+                    thread_id,
+                    created_at
+                )
+                """
+            )
 
     def register_pending(
         self,

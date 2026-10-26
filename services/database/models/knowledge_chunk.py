@@ -1,8 +1,10 @@
+
 from datetime import datetime
 from typing import TYPE_CHECKING, Any
 
 from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
+    JSON,
     DateTime,
     ForeignKey,
     Integer,
@@ -11,12 +13,18 @@ from sqlalchemy import (
     func,
 )
 from sqlalchemy.dialects.postgresql import JSONB
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import (
+    Mapped,
+    mapped_column,
+    relationship,
+)
 
 from services.database.base import Base
 
 if TYPE_CHECKING:
-    from services.database.models.knowledge_document import KnowledgeDocument
+    from services.database.models.knowledge_document import (
+        KnowledgeDocument,
+    )
 
 
 EMBEDDING_DIM = 512
@@ -24,11 +32,19 @@ EMBEDDING_DIM = 512
 
 class KnowledgeChunk(Base):
     """
-    知识库文档切片
+    知识库文档切片。
 
-    一份 KnowledgeDocument 会被切分成多个 KnowledgeChunk。
-    每个 Chunk 保存文本内容及其 Embedding 向量，
-    后续 Retriever 会基于 embedding 做相似度搜索。
+    PostgreSQL:
+        metadata -> JSONB
+        embedding -> vector(512)
+
+    SQLite 测试:
+        metadata -> JSON
+        embedding -> JSON
+
+    注意：
+        SQLite 仅用于普通数据操作测试，
+        不支持 PostgreSQL pgvector 相似度检索。
     """
 
     __tablename__ = "knowledge_chunks"
@@ -65,14 +81,22 @@ class KnowledgeChunk(Base):
         nullable=False,
     )
 
+    # PostgreSQL JSONB / SQLite JSON
     chunk_metadata: Mapped[dict[str, Any] | None] = mapped_column(
         "metadata",
-        JSONB,
+        JSONB().with_variant(
+            JSON(),
+            "sqlite",
+        ),
         nullable=True,
     )
 
+    # PostgreSQL pgvector / SQLite JSON
     embedding: Mapped[list[float] | None] = mapped_column(
-        Vector(EMBEDDING_DIM),
+        Vector(EMBEDDING_DIM).with_variant(
+            JSON(),
+            "sqlite",
+        ),
         nullable=True,
     )
 

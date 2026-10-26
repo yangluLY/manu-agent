@@ -1,4 +1,5 @@
 
+from langgraph.checkpoint.base import BaseCheckpointSaver
 from sqlalchemy.orm import Session
 
 from agent.llm.deepseek_client import DeepSeekClient
@@ -80,4 +81,35 @@ def get_real_workflow(
     return get_workflow(
         llm=llm,
         step_runner=step_runner,
+    )
+
+
+def get_persistent_real_workflow(
+    db: Session,
+    checkpointer: BaseCheckpointSaver,
+):
+    """
+    V4.8 专用真实工作流。
+
+    使用：
+    - DeepSeek Router / Planner
+    - MES / RAG / BI 真实执行器
+    - PostgreSQL Checkpointer
+
+    注意：
+    自动调用路径必须启用工具级只读权限。
+    """
+
+    llm = DeepSeekClient()
+
+    step_runner = create_real_step_runner(
+        db=db,
+        llm=llm,
+    )
+
+    return build_workflow(
+        llm_invoke=create_deepseek_invoke(llm),
+        step_runner=step_runner,
+        checkpointer=checkpointer,
+        require_approval=False,
     )
