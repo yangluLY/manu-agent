@@ -3,7 +3,7 @@ import {
   createContext,
   useCallback,
   useContext,
-  useEffect,
+  useLayoutEffect,
   useState,
   type ReactNode,
 } from 'react'
@@ -21,27 +21,51 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | null>(null)
+const TOKEN_STORAGE_KEY = 'manu-agent.access-token'
+
+function readStoredToken(): string {
+  try {
+    return window.sessionStorage.getItem(TOKEN_STORAGE_KEY) || ''
+  } catch {
+    return ''
+  }
+}
+
+function storeToken(token: string) {
+  try {
+    if (token) {
+      window.sessionStorage.setItem(TOKEN_STORAGE_KEY, token)
+    } else {
+      window.sessionStorage.removeItem(TOKEN_STORAGE_KEY)
+    }
+  } catch {
+    // 浏览器禁用存储时，仍允许当前页面使用内存中的登录状态。
+  }
+}
 
 export function AuthProvider({
   children,
 }: {
   children: ReactNode
 }) {
-  const [accessToken, setAccessToken] = useState('')
+  // 首次渲染时恢复，避免受保护路由在刷新时误判为未登录。
+  const [accessToken, setAccessToken] = useState(readStoredToken)
 
   const login = useCallback((token: string) => {
     if (!token.trim()) {
       throw new Error('无效的 Access Token')
     }
 
+    storeToken(token)
     setAccessToken(token)
   }, [])
 
   const logout = useCallback(() => {
+    storeToken('')
     setAccessToken('')
   }, [])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // 为 Axios 注入当前 Token
     setAccessTokenGetter(() => accessToken || null)
 
